@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+    --font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --brand-wine: #701a1e;
+    --brand-wine-dark: #4a1013;
+    --brand-amber: #d4af37;
+    --canvas-cream: #faf8f5;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--canvas-cream);
+    color: #1c1917;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}

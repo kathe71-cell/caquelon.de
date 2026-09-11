@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>caquelon.de – Fondue-Ratgeber &amp; Materialkunde</title>
+    <link>https://caquelon.de/</link>
+    <description>Fachportal für Caquelons, Schweizer Käsefondue, Materialkunde und Rechner.</description>
+    <language>de-CH</language>
+    <lastBuildDate>Mon, 07 Sep 2026 12:00:00 +0200</lastBuildDate>
+    <atom:link href="https://caquelon.de/feed.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Materialvergleich: Keramik vs. Gusseisen Caquelons</title>
+      <link>https://caquelon.de/Materialien</link>
+      <guid>https://caquelon.de/Materialien</guid>
+      <pubDate>Mon, 07 Sep 2026 10:00:00 +0200</pubDate>
+      <description>Welches Caquelon-Material eignet sich am besten für Käsefondue und Fleischfondue? Vor- und Nachteile im Vergleich.</description>
+    </item>
+    <item>
+      <title>Interaktiver Fondue-Mengenrechner</title>
+      <link>https://caquelon.de/Rechner</link>
+      <guid>https://caquelon.de/Rechner</guid>
+      <pubDate>Mon, 07 Sep 2026 10:30:00 +0200</pubDate>
+      <description>Berechnen Sie exakt Käsemischung, Wein, Kirschwasser und Brot pro Person für das perfekte Fondue.</description>
+    </item>
+  </channel>
+</rss>

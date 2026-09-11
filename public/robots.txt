@@ -1,0 +1,6 @@
+# Robots.txt for caquelon.de
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://caquelon.de/sitemap.xml

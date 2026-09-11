@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Background Circle -->
+  <circle cx="50" cy="50" r="48" fill="#701a1e" stroke="#d4af37" stroke-width="3"/>
+  <!-- Flame -->
+  <path d="M50 20 C42 35 58 40 50 55 C45 42 38 32 50 20 Z" fill="#f59e0b"/>
+  <path d="M50 28 C45 38 55 42 50 55 C47 45 42 38 50 28 Z" fill="#fbbf24"/>
+  <!-- Fondue Pot (Caquelon) -->
+  <path d="M22 46 L78 46 Q74 76 50 76 Q26 76 22 46 Z" fill="#faf8f5" stroke="#d4af37" stroke-width="2"/>
+  <!-- Pot Handle -->
+  <rect x="74" y="52" width="18" height="6" rx="3" fill="#faf8f5" stroke="#d4af37" stroke-width="1.5"/>
+  <!-- Melting Cheese Line -->
+  <path d="M24 48 Q37 56 50 48 Q63 56 76 48" fill="none" stroke="#f59e0b" stroke-width="3" stroke-linecap="round"/>
+</svg>
