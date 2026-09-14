@@ -20,7 +20,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Fondue Bourguignonne (Öl-Fondue)",
   "image": [
-    "https://images.unsplash.com/photo-1599558156293-2410b0a88b85?q=80&w=2070&auto=format&fit=crop"
+    "https://caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization",

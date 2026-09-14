@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import SEOHead from '../components/SEOHead';
 
 export default function Datenschutz() {
@@ -26,7 +27,7 @@ export default function Datenschutz() {
                 <p>Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
                 <div className="bg-stone-50 p-6 rounded-xl my-4">
                   <p className="font-bold">Verantwortliche Stelle:</p>
-                  <p>Jens Kathe – vollständige Anschrift und Kontaktdaten siehe <a href="/Impressum" className="text-red-900 underline">Impressum</a>.</p>
+                  <p>Jens Kathe – vollständige Anschrift und Kontaktdaten siehe <Link to="/impressum" className="text-red-900 underline">Impressum</Link>.</p>
                 </div>
               </section>
 
