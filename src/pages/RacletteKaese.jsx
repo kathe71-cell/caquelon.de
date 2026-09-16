@@ -33,7 +33,7 @@ export default function RacletteKaese() {
           "@type": "ListItem",
           "position": 2,
           "name": "Raclette Käse",
-          "item": "https://caquelon.de/RacletteKaese"
+          "item": "https://caquelon.de/raclettekaese"
         }
       ]
     }
@@ -42,10 +42,10 @@ export default function RacletteKaese() {
   return (
     <>
       <SEOHead 
-        title="Raclette Käse kaufen: Die besten Käsesorten für perfektes Raclette 2025"
+        title="Raclette Käse kaufen: Schweizer AOP Käsesorten für Raclette"
         description="Welcher Käse eignet sich für Raclette? Entdecke die besten Raclette-Käsesorten, Reifung und wo du authentischen Schweizer Raclette-Käse kaufen kannst."
         keywords="Raclette Käse, Käse für Raclette, Raclette du Valais, Schweizer Raclette Käse, Raclette Käse kaufen"
-        canonical="https://caquelon.de/RacletteKaese"
+        canonical="https://caquelon.de/raclettekaese"
         structuredData={structuredData}
       />
 

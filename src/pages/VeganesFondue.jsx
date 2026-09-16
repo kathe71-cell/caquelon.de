@@ -63,7 +63,7 @@ export default function VeganesFondue() {
         title="Veganes Fondue Rezept mit Gemüse & Tofu | Caquelon.de"
         description="Herzhaftes veganes Fondue mit Gemüse, Tofu und leckerer Brühe. Perfekt für pflanzliche Ernährung!"
         keywords="veganes Fondue, Tofu Fondue, pflanzliches Fondue, Gemüse Fondue"
-        canonical="https://caquelon.de/VeganesFondue"
+        canonical="https://caquelon.de/veganesfondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

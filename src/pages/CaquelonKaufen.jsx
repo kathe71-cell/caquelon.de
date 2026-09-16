@@ -68,10 +68,10 @@ export default function CaquelonKaufen() {
   return (
     <>
       <SEOHead 
-        title="Caquelon kaufen 2026: Der große Fonduetopf & Set Kaufberater"
+        title="Caquelon kaufen: Der große Fonduetopf & Set Kaufberater"
         description="Welches Caquelon passt zu deinen Abenden? Unabhängige Kaufberatung für Fonduetöpfe aus Keramik, Gusseisen & Edelstahl. Mit Induktions-Tipps!"
         keywords="Caquelon kaufen, Fonduetopf kaufen, Fondueset Induktion, Keramik Caquelon, Gusseisen Fonduetopf, Kuhn Rikon Zermatt, Le Creuset Fondue"
-        canonical="https://caquelon.de/CaquelonKaufen"
+        canonical="https://caquelon.de/caquelonkaufen"
         structuredData={structuredData}
       />
 
@@ -83,7 +83,7 @@ export default function CaquelonKaufen() {
           <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/30 px-4 py-1.5 rounded-full text-amber-300 text-xs font-bold uppercase tracking-widest mb-6">
               <Award className="w-4 h-4" />
-              <span>Unabhängiger Material- & Kaufberater 2026</span>
+              <span>Material- &amp; Kaufberatung</span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
@@ -97,7 +97,7 @@ export default function CaquelonKaufen() {
             <div className="flex flex-wrap justify-center gap-4 text-xs md:text-sm font-semibold text-stone-300 mb-8">
               <div className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
                 <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                <span>Für Käse, Fleisch & Schokolade</span>
+                <span>Für Käse, Fleisch &amp; Schokolade</span>
               </div>
               <div className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
                 <CheckCircle2 className="w-4 h-4 text-amber-400" />
@@ -105,7 +105,7 @@ export default function CaquelonKaufen() {
               </div>
               <div className="flex items-center gap-1.5 bg-white/10 px-3.5 py-1.5 rounded-full">
                 <CheckCircle2 className="w-4 h-4 text-amber-400" />
-                <span>Von Schweizer Experten empfohlen</span>
+                <span>Materialspezifikationen geprüft</span>
               </div>
             </div>
 
@@ -286,8 +286,8 @@ export default function CaquelonKaufen() {
 
         {/* Sticky Floating CTA */}
         <FloatingCTABar 
-          title="Bestseller Fonduetopf 2026"
-          subtitle="Kuhn Rikon Zermatt Keramik-Set (4.9 ★)"
+          title="Kaufberatung & Modell-Vergleich"
+          subtitle="Kuhn Rikon, Le Creuset & Spring im Überblick"
           link="https://amzn.to/4oVKIMA"
         />
       </div>

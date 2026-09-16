@@ -5,10 +5,10 @@ import ProductComparisonTable from '../components/ProductComparisonTable';
 import FloatingCTABar from '../components/FloatingCTABar';
 import CTAButton from '../components/CTAButton';
 import SEOHead from '../components/SEOHead';
-import SocialShare from '../components/SocialShare';
 import GourmetPairingGuide from '../components/GourmetPairingGuide';
 import FondueFinderQuiz from '../components/FondueFinderQuiz';
-import { Flame, ShieldCheck, Award, Star, Utensils, Users, ArrowRight, CheckCircle2, Code2, Copy, Check } from 'lucide-react';
+import { Flame, ShieldCheck, Award, Utensils, Users, ArrowRight, Code2, Copy, Check, ChevronDown, HelpCircle } from 'lucide-react';
+import { RECIPES } from '../data/recipes';
 
 const featuredRecipes = [
   {
@@ -22,7 +22,7 @@ const featuredRecipes = [
   },
   {
     title: "Fondue Bourguignonne (Fleisch in Öl)",
-    description: "Der Klassiker für Fleischliebhaber: Zartes Rinderfilet, Schwein und Pute in sprudelnd heißem Pflanzenöl perfekt auf den Punkt gegart.",
+    description: "Der Klassiker für Fleischliebhaber: Zartes Rinderfilet, Schwein und Pute in sprudelnd heißem Pflanzenöl gegart.",
     category: "Fleischfondue",
     cookTime: "30 Min",
     servings: "4-6",
@@ -49,8 +49,29 @@ const featuredRecipes = [
   }
 ];
 
+const homeFAQs = [
+  {
+    q: "Was ist ein Caquelon und wofür wird es verwendet?",
+    a: "Ein Caquelon ist ein traditioneller Schweizer Fonduetopf mit Stielgriff aus hitzebeständiger Keramik, Steingut oder emailliertem Gusseisen. Durch die dickwandige Bauweise speichert und verteilt er Hitze besonders gleichmäßig, sodass Käsefondue cremig bleibt, ohne anzubrennen."
+  },
+  {
+    q: "Welches Material eignet sich am besten für Käsefondue?",
+    a: "Für klassisches Käsefondue ist glasierte Keramik oder Steingut die erste Wahl, da sie Wärme sanft und träge abgibt. Für Induktionsherde oder Allround-Nutzung (auch Fleischfondue) empfiehlt sich emailliertes Gusseisen."
+  },
+  {
+    q: "Wie viel Gramm Käse rechnet man pro Person?",
+    a: "Die Schweizer Faustformel besagt: 200 g geriebene Käsemischung (z. B. 100 g Gruyère AOP und 100 g Vacherin Fribourgeois AOP) sowie ca. 200 g Brot und 100 ml trockener Weißwein pro erwachsener Person."
+  },
+  {
+    q: "Funktioniert jedes Caquelon auf einem Induktionsherd?",
+    a: "Nein. Reine Keramik- oder Ton-Caquelons sind nicht ferromagnetisch und funktionieren auf Induktion nur mit einer speziellen Induktions-Adapterplatte. Wer direkt auf Induktion erhitzen möchte, benötigt ein Caquelon aus Gusseisen oder mit integriertem Edelstahl-Magnetboden."
+  }
+];
+
 export default function Home() {
   const [copiedEmbed, setCopiedEmbed] = useState(false);
+  const [copiedCitation, setCopiedCitation] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   const copyEmbedCode = () => {
     const code = `<iframe src="https://caquelon.de/rechner-embed" width="100%" height="650" style="border:none; border-radius:24px; box-shadow:0 4px 20px rgba(0,0,0,0.08);" title="Käsefondue Mengenrechner"></iframe>\n<p style="font-size:12px; color:#78716c; text-align:center;">Mengenrechner bereitgestellt von <a href="https://caquelon.de" target="_blank" rel="noopener" style="color:#7f1d1d; text-decoration:underline;">caquelon.de</a></p>`;
@@ -58,8 +79,6 @@ export default function Home() {
     setCopiedEmbed(true);
     setTimeout(() => setCopiedEmbed(false), 2500);
   };
-
-  const [copiedCitation, setCopiedCitation] = useState(false);
 
   const copyCitationText = () => {
     const citation = "caquelon.de Fachredaktion (2026). Caquelon-Kaufberatung & Schweizer Fondue-Mengenlehre. https://caquelon.de/ (Stand: September 2026)";
@@ -110,40 +129,14 @@ export default function Home() {
       {
         "@type": "FAQPage",
         "@id": "https://caquelon.de/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Was ist ein Caquelon und wofür wird es verwendet?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Ein Caquelon ist ein traditioneller Schweizer Fonduetopf mit Stielgriff aus hitzebeständiger Keramik, Steingut oder emailliertem Gusseisen. Durch die dickwandige Bauweise speichert und verteilt er Hitze besonders gleichmäßig, sodass Käsefondue cremig bleibt, ohne anzubrennen."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Welches Material eignet sich am besten für Käsefondue?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Für klassisches Käsefondue ist glasierte Keramik oder Steingut die erste Wahl, da sie Wärme sanft und träge abgibt. Für Induktionsherde oder Allround-Nutzung (auch Fleischfondue) empfiehlt sich emailliertes Gusseisen."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Wie viel Gramm Käse rechnet man pro Person?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Die Schweizer Faustformel besagt: 200 g geriebene Käsemischung (z. B. 100 g Gruyère AOP und 100 g Vacherin Fribourgeois AOP) sowie ca. 200 g Brot und 100 ml trockener Weißwein pro erwachsener Person."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Funktioniert jedes Caquelon auf einem Induktionsherd?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Nein. Reine Keramik- oder Ton-Caquelons sind nicht ferromagnetisch und funktionieren auf Induktion nur mit einer speziellen Induktions-Adapterplatte. Wer direkt auf Induktion erhitzen möchte, benötigt ein Caquelon aus Gusseisen oder mit integriertem Edelstahl-Magnetboden."
-            }
+        "mainEntity": homeFAQs.map(item => ({
+          "@type": "Question",
+          "name": item.q,
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": item.a
           }
-        ]
+        }))
       },
       {
         "@type": "Recipe",
@@ -174,9 +167,9 @@ export default function Home() {
   return (
     <>
       <SEOHead 
-        title="Caquelon.de – Der Fondue- & Fonduetopf Ratgeber 2026"
-        description="Fonduetopf Kaufberatung, Schweizer Käsefondue-Rezepte & Mengenkalkulation. Entdecke die besten Caquelons aus Keramik & Gusseisen."
-        keywords="Caquelon, Fonduetopf kaufen, Schweizer Käsefondue, Fondue Rechaud, Fondue Set Induktion, Caquelon Test 2026"
+        title="Caquelon.de – Der Fondue- & Fonduetopf Ratgeber"
+        description={`Fonduetopf Kaufberatung, Schweizer Käsefondue-Rezepte & Mengenkalkulation. Entdecke alle ${RECIPES.length} Rezepte und die besten Caquelons aus Keramik & Gusseisen.`}
+        keywords="Caquelon, Fonduetopf kaufen, Schweizer Käsefondue, Fondue Rechaud, Fondue Set Induktion, Caquelon Kaufberatung"
         canonical="https://caquelon.de/"
         structuredData={structuredData}
       />
@@ -191,43 +184,43 @@ export default function Home() {
               </h1>
 
               <p className="text-lg md:text-xl text-stone-300 max-w-3xl mx-auto mb-10 leading-relaxed font-normal">
-                Vergesse angebrannte Käsemassen und rauchende Öltöpfe. Wir testen die besten Fonduetöpfe für Induktion, Ceran und Rechaud – inkl. erprobter Rezepte & Mengenkalkulator.
+                Verlässliche Kaufberatung für Induktion, Ceran und Rechaud – inklusive {RECIPES.length} erprobter Rezepte &amp; präzisem Mengenkalkulator.
               </p>
 
               <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
                 <CTAButton href={createPageUrl('CaquelonKaufen')} size="large" variant="secondary">
-                  Top 3 Caquelons im Test *
+                  Caquelons im Modell-Vergleich *
                 </CTAButton>
                 <CTAButton href={createPageUrl('FondueRezepte')} size="large" variant="outlineLight">
-                  Alle 26 Rezepte durchsuchen &rarr;
+                  Alle {RECIPES.length} Rezepte durchsuchen &rarr;
                 </CTAButton>
               </div>
 
-              {/* Trust Badges */}
+              {/* Trust Badges - Sachlich & BGH/UWG-konform */}
               <div className="pt-6 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-4 text-center text-xs text-stone-300">
                 <div className="flex items-center justify-center gap-1.5">
-                  <Star className="w-4 h-4 text-amber-400 fill-amber-400" />
-                  <span>Unabhängige Tests</span>
+                  <Award className="w-4 h-4 text-amber-400" />
+                  <span>Herstellerdaten geprüft</span>
                 </div>
                 <div className="flex items-center justify-center gap-1.5">
                   <Flame className="w-4 h-4 text-amber-400" />
-                  <span>26 Erprobte Rezepte</span>
+                  <span>{RECIPES.length} Erprobte Rezepte</span>
                 </div>
                 <div className="flex items-center justify-center gap-1.5">
                   <Users className="w-4 h-4 text-amber-400" />
                   <span>Mengenrechner integriert</span>
                 </div>
                 <div className="flex items-center justify-center gap-1.5">
-                  <Award className="w-4 h-4 text-amber-400" />
-                  <span>100% DSGVO-Konform</span>
+                  <ShieldCheck className="w-4 h-4 text-amber-400" />
+                  <span>Frei von Herstellerbindung</span>
                 </div>
               </div>
 
-              {/* Position-0 Featured Snippet Definition Box */}
+              {/* Definition Box */}
               <div className="mt-8 text-left bg-stone-800/80 border-l-4 border-amber-400 p-5 rounded-r-2xl border border-white/10 shadow-lg">
                 <div className="flex items-center gap-2 mb-2 text-xs font-extrabold uppercase tracking-wider text-amber-300">
                   <Utensils className="w-4 h-4 text-amber-400" />
-                  <span>Definition &amp; Warenkunde (Position-0)</span>
+                  <span>Definition &amp; Warenkunde: Was ist ein Caquelon?</span>
                 </div>
                 <p className="text-xs sm:text-sm text-stone-200 leading-relaxed font-medium">
                   Ein <strong className="text-white font-bold">Caquelon</strong> (französisch für Kasserolle) ist ein traditioneller Fonduetopf mit Stielgriff aus hitzebeständigem Steingut, glasierter Keramik oder Gusseisen, der speziell für die Zubereitung von Schweizer Käsefondue konzipiert ist. Durch die dicken Wände leitet und speichert das Material die Wärme besonders schonend und gleichmäßig, sodass der geschmolzene Käse bei niedriger Flamme auf dem Rechaud cremig bleibt, ohne anzubrennen.
@@ -249,7 +242,7 @@ export default function Home() {
               Entdecke deine Welt des Fondues
             </h2>
             <p className="text-stone-600 text-sm mt-2">
-              Wähle deine bevorzugte Art des Fondues für spezifische Rezepte und die beste Topf-Empfehlung.
+              Wähle deine bevorzugte Art des Fondues für spezifische Rezepte und die passende Topf-Empfehlung.
             </p>
           </div>
 
@@ -259,7 +252,7 @@ export default function Home() {
                 🧀
               </div>
               <h3 className="font-extrabold text-stone-900 text-base group-hover:text-red-900 transition">Käsefondue</h3>
-              <p className="text-xs text-stone-500 mt-1">Moitié-Moitié, Bierkäse & ohne Alkohol</p>
+              <p className="text-xs text-stone-500 mt-1">Moitié-Moitié, Bierkäse &amp; ohne Alkohol</p>
             </a>
 
             <a href={createPageUrl('FondueBourguignonne')} className="group bg-white rounded-3xl p-6 border border-stone-200 shadow-md hover:shadow-xl transition-all duration-300 text-center">
@@ -267,7 +260,7 @@ export default function Home() {
                 🥩
               </div>
               <h3 className="font-extrabold text-stone-900 text-base group-hover:text-red-900 transition">Fleischfondue</h3>
-              <p className="text-xs text-stone-500 mt-1">Bourguignonne in Öl & Brühe (Chinoise)</p>
+              <p className="text-xs text-stone-500 mt-1">Bourguignonne in Öl &amp; Brühe (Chinoise)</p>
             </a>
 
             <a href={createPageUrl('VeganesKaeseFondue')} className="group bg-white rounded-3xl p-6 border border-stone-200 shadow-md hover:shadow-xl transition-all duration-300 text-center">
@@ -275,7 +268,7 @@ export default function Home() {
                 🌱
               </div>
               <h3 className="font-extrabold text-stone-900 text-base group-hover:text-red-900 transition">Veganes Fondue</h3>
-              <p className="text-xs text-stone-500 mt-1">Cashew-Käse & würziger Gemüse-Sud</p>
+              <p className="text-xs text-stone-500 mt-1">Cashew-Käse &amp; aromatischer Kräuter-Sud</p>
             </a>
 
             <a href={createPageUrl('SchokoladenFondue')} className="group bg-white rounded-3xl p-6 border border-stone-200 shadow-md hover:shadow-xl transition-all duration-300 text-center">
@@ -283,7 +276,7 @@ export default function Home() {
                 🍫
               </div>
               <h3 className="font-extrabold text-stone-900 text-base group-hover:text-red-900 transition">Dessert Fondue</h3>
-              <p className="text-xs text-stone-500 mt-1">Pistazie, Toblerone & Nutella</p>
+              <p className="text-xs text-stone-500 mt-1">Pistazie, Toblerone &amp; Nutella</p>
             </a>
           </div>
         </section>
@@ -309,7 +302,7 @@ export default function Home() {
                 </h2>
               </div>
               <a href={createPageUrl('FondueRezepte')} className="mt-4 md:mt-0 text-sm font-bold text-red-900 hover:text-red-700 underline flex items-center gap-1">
-                <span>Alle 26 Rezepte ansehen</span>
+                <span>Alle {RECIPES.length} Rezepte ansehen</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
@@ -332,9 +325,9 @@ export default function Home() {
                     <Code2 className="w-3.5 h-3.5" />
                     Kostenloses Widget für Food-Blogs &amp; Kochportale
                   </div>
-                  <h3 className="text-xl font-black text-white">Käsefondue-Mengenrechner auf deiner Website einbinden</h3>
+                  <h3 className="text-xl font-black text-white">Käsefondue- &amp; Raclette-Mengenrechner auf deiner Website einbinden</h3>
                   <p className="text-xs sm:text-sm text-stone-400 mt-1">
-                    Biete deinen Lesern eine automatische Mengenberechnung für Schweizer Käsefondue &amp; Raclette per sauberem iFrame.
+                    Biete deinen Lesern eine automatische Mengenberechnung für Schweizer Käsefondue &amp; Raclette per responsivem iFrame.
                   </p>
                 </div>
                 <button
@@ -352,6 +345,46 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Sichtbare FAQ-Section (exakt synchron mit dem FAQPage Schema) */}
+        <section className="py-16 bg-white border-t border-stone-200">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-10">
+              <div className="inline-flex items-center gap-2 bg-amber-100 text-amber-900 px-3 py-1 rounded-full text-xs font-bold uppercase mb-2">
+                <HelpCircle className="w-3.5 h-3.5" />
+                <span>Häufig gestellte Fragen</span>
+              </div>
+              <h2 className="text-2xl sm:text-3xl font-black text-stone-900">
+                Wissenswertes rund um Caquelons &amp; Fondue
+              </h2>
+            </div>
+
+            <div className="space-y-4">
+              {homeFAQs.map((faq, index) => {
+                const isOpen = openFaqIndex === index;
+                return (
+                  <div 
+                    key={index}
+                    className="border border-stone-200 rounded-2xl overflow-hidden bg-stone-50/60 transition-colors"
+                  >
+                    <button
+                      onClick={() => setOpenFaqIndex(isOpen ? null : index)}
+                      className="w-full text-left px-5 py-4 flex items-center justify-between gap-4 font-bold text-stone-900 text-sm sm:text-base cursor-pointer hover:bg-stone-100/80 transition-colors"
+                    >
+                      <span>{faq.q}</span>
+                      <ChevronDown className={`w-4 h-4 text-stone-500 shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180 text-red-900' : ''}`} />
+                    </button>
+                    {isOpen && (
+                      <div className="px-5 pb-4 pt-1 text-xs sm:text-sm text-stone-600 leading-relaxed border-t border-stone-100 bg-white">
+                        {faq.a}
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
         {/* E-E-A-T Editorial Trust Box */}
         <section className="py-12 bg-[#fbf9f6] border-t border-stone-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -362,7 +395,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h4 className="text-base font-bold text-stone-900">Fachredaktion caquelon.de</h4>
-                  <p className="text-xs text-stone-500">Stand: September 2026 • Schweizer Kulinarik, AOP-Käsekunde &amp; Materialtests</p>
+                  <p className="text-xs text-stone-500">Stand: September 2026 • Schweizer Kulinarik, AOP-Käsekunde &amp; Materialkunde</p>
                 </div>
               </div>
               <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4 text-xs text-stone-600">
@@ -376,16 +409,16 @@ export default function Home() {
                 <div>
                   <div className="flex items-center gap-1.5 font-bold text-stone-900 mb-1">
                     <ShieldCheck className="w-4 h-4 text-red-900" />
-                    <span>Unabhängige Materialprüfungen</span>
+                    <span>Transparente Kaufberatung</span>
                   </div>
-                  <p>Unabhängiges Fachportal nach § 5 DDG ohne Verkaufsbindung an einzelne Topfhersteller. Reale thermische Tests auf Induktion &amp; Rechaud.</p>
+                  <p>Unabhängiges Fachportal nach § 5 DDG ohne Verkaufsbindung an einzelne Hersteller. Fundierter Materialvergleich für Induktion &amp; Rechaud.</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5 font-bold text-stone-900 mb-1">
                     <Award className="w-4 h-4 text-red-900" />
                     <span>Geprüfte Portionsmengen</span>
                   </div>
-                  <p>Praxiserprobte Richtwerte (200 g Käse und 200 g Brot pro Person) für gelingsichere Fondue-Abende ohne Reste oder Mangel.</p>
+                  <p>Praxiserprobte Richtwerte (200 g Käse und 200 g Brot pro Person) für gelungene Fondue-Abende ohne Reste oder Mangel.</p>
                 </div>
               </div>
             </div>
@@ -412,7 +445,7 @@ export default function Home() {
         {/* Floating Conversion Bar */}
         <FloatingCTABar 
           title="Optimaler Fonduetopf gesucht?"
-          subtitle="Top 3 Caquelons aus Keramik & Gusseisen im Test"
+          subtitle="Modell-Vergleich für Keramik, Gusseisen &amp; Edelstahl"
           link={createPageUrl('CaquelonKaufen')}
         />
       </div>

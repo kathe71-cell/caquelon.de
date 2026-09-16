@@ -31,7 +31,7 @@ const structuredData = {
     "name": "Caquelon.de"
   },
   "datePublished": "2026-09-03",
-  "description": "Das original Schweizer Käsefondue Moitié-Moitié mit Gruyère AOP, Vacherin Fribourgeois AOP und Kirschwasser. Garantiert gelingsicher!",
+  "description": "Das original Schweizer Käsefondue Moitié-Moitié mit Gruyère AOP, Vacherin Fribourgeois AOP und Kirschwasser. Praxiserprobtes Rezept für cremigen Genuss.",
   "recipeCuisine": "Schweizerisch",
   "prepTime": "PT10M",
   "cookTime": "PT15M", 
@@ -64,10 +64,10 @@ export default function SchweizerKaeseFondue() {
   return (
     <>
       <SEOHead 
-        title="Original Schweizer Käsefondue Rezept (Moitié-Moitié) | Gelingsicher"
+        title="Original Schweizer Käsefondue Rezept (Moitié-Moitié) | caquelon.de"
         description="Das originale Schweizer Käsefondue Rezept (Moitié-Moitié) mit Gruyère AOP & Vacherin AOP. Mit Mengenumrechner & Profi-Tipps gegen Anbrennen!"
         keywords="Schweizer Käsefondue, Moitie Moitie, Gruyère Vacherin Fondue, Käsefondue Rezept original, Caquelon Käsefondue"
-        canonical="https://caquelon.de/SchweizerKaeseFondue"
+        canonical="https://caquelon.de/schweizerkaesefondue"
         structuredData={structuredData}
       />
 
@@ -85,7 +85,7 @@ export default function SchweizerKaeseFondue() {
             </h1>
 
             <p className="text-lg md:text-xl text-stone-300 max-w-2xl mx-auto mb-8 leading-relaxed font-normal">
-              Die perfekte Harmonie aus würzigem <strong>Gruyère AOP</strong> und cremigem <strong>Vacherin Fribourgeois AOP</strong>. Garantiert gelingsicher & sämig.
+              Die perfekte Harmonie aus würzigem <strong>Gruyère AOP</strong> und cremigem <strong>Vacherin Fribourgeois AOP</strong>. Traditionell zubereitet, cremig &amp; sämig.
             </p>
 
             <div className="flex flex-wrap justify-center gap-4 text-xs md:text-sm font-semibold text-stone-200 mb-8">
@@ -107,7 +107,7 @@ export default function SchweizerKaeseFondue() {
             <div className="flex justify-center">
               <SocialShare 
                 title="Original Schweizer Käsefondue Rezept (Moitié-Moitié)"
-                description="Das authentische Rezept mit Gruyère & Vacherin - sämig, cremig und garantiert gelingsicher."
+                description="Das authentische Rezept mit Gruyère & Vacherin - sämig, cremig und fein abgestimmt."
               />
             </div>
           </div>
@@ -182,7 +182,7 @@ export default function SchweizerKaeseFondue() {
                 </ol>
               </div>
 
-              {/* Troubleshooting & Gelingsicher-Garantie */}
+              {/* Troubleshooting & Gelingtipps */}
               <div className="bg-amber-50/80 rounded-3xl p-8 border border-amber-200 text-stone-800 space-y-4">
                 <h3 className="text-xl font-bold text-amber-950 flex items-center gap-2">
                   <AlertCircle className="w-5 h-5 text-amber-700" />
@@ -205,10 +205,10 @@ export default function SchweizerKaeseFondue() {
               <div className="bg-gradient-to-r from-stone-900 to-red-950 text-white rounded-3xl p-8 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-xl">
                 <div>
                   <h4 className="text-xl font-bold mb-1">Welches Caquelon nutzt man dafür?</h4>
-                  <p className="text-xs text-stone-300">Wir empfehlen für Käsefondue feuerfeste Keramik aus der Schweiz.</p>
+                  <p className="text-xs text-stone-300">Für reines Käsefondue ist dickwandige Keramik traditionell der Maßstab.</p>
                 </div>
                 <CTAButton href={createPageUrl('CaquelonKaufen')} variant="secondary" size="small" className="flex-shrink-0">
-                  Testsieger Caquelon ansehen &rarr;
+                  Passende Caquelons ansehen &rarr;
                 </CTAButton>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function SchweizerKaeseFondue() {
         {/* Floating Affiliate Bar */}
         <FloatingCTABar 
           title="Kuhn Rikon Zermatt Keramik-Caquelon"
-          subtitle="Das beste Set für echtes Schweizer Käsefondue (4.9 ★)"
+          subtitle="Traditionelles Set für Schweizer Käsefondue"
           link="https://amzn.to/4oVKIMA"
         />
       </div>

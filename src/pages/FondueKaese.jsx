@@ -12,8 +12,8 @@ export default function FondueKaese() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://caquelon.de/FondueKaese",
-        "name": "Fondue Käse kaufen 2026: Die besten Käsesorten & Mischungen",
+        "@id": "https://caquelon.de/fonduekaese",
+        "name": "Fondue Käse kaufen: Schweizer AOP Käsesorten & Mischungen",
         "description": "Welcher Käse eignet sich für Fondue? Ratgeber für Gruyère AOP, Vacherin Fribourgeois, Appenzeller & Emmentaler.",
         "inLanguage": "de-DE"
       },
@@ -36,10 +36,10 @@ export default function FondueKaese() {
   return (
     <>
       <SEOHead 
-        title="Fondue Käse kaufen 2026: Die besten Käsesorten & Mischungen"
+        title="Fondue Käse kaufen: Die besten Käsesorten & Mischungen"
         description="Welcher Käse schmilzt am besten? Ratgeber für Gruyère AOP, Vacherin Fribourgeois, Appenzeller & Emmentaler. Mit Bezugsquellen & Mischverhältnis!"
         keywords="Fondue Käse kaufen, Käse für Fondue, Fondue Käsemischung, Gruyère kaufen, Vacherin Fribourgeois, Appenzeller Fondue"
-        canonical="https://caquelon.de/FondueKaese"
+        canonical="https://caquelon.de/fonduekaese"
         structuredData={structuredData}
       />
 
@@ -170,13 +170,13 @@ export default function FondueKaese() {
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div className="bg-gradient-to-r from-red-950 to-stone-900 text-white rounded-3xl p-8 md:p-12 shadow-xl">
               <h3 className="text-2xl md:text-3xl font-extrabold mb-4">
-                Beste Fertige Schweizer Fondue-Mischung (Moitié-Moitié)
+                Original Schweizer Fondue-Mischung (Moitié-Moitié)
               </h3>
               <p className="text-stone-300 text-sm md:text-base max-w-2xl mx-auto mb-8">
-                Wenn du dir das Reiben sparen möchtest: Original verzehrfertige Mischung aus der Schweiz mit Gruyère & Vacherin AOP für gelingsicheres Fondue.
+                Wenn du dir das Reiben sparen möchtest: Original verzehrfertige Mischung aus der Schweiz mit Gruyère & Vacherin AOP für traditionell sämiges Käsefondue.
               </p>
               <CTAButton href="https://amzn.to/4mLWWEX" size="large" variant="secondary">
-                Jetzt Fertige Käsemischung bestellen *
+                Fertige Käsemischung ansehen *
               </CTAButton>
             </div>
           </div>

@@ -104,6 +104,10 @@ export default function Layout({ children, currentPageName }) {
     } else if (settings) {
       setCookieSettings(JSON.parse(settings));
     }
+
+    const handleOpenSettings = () => setShowCookieBanner(true);
+    window.addEventListener('open-cookie-settings', handleOpenSettings);
+    return () => window.removeEventListener('open-cookie-settings', handleOpenSettings);
   }, []);
 
   const handleCookieConsent = (type) => {
@@ -398,6 +402,7 @@ export default function Layout({ children, currentPageName }) {
               <ul className="space-y-2 text-xs text-stone-300 mb-4">
                 <li><Link to={createPageUrl("Impressum")} onClick={scrollToTop} className="hover:text-white">Impressum</Link></li>
                 <li><Link to={createPageUrl("Datenschutz")} onClick={scrollToTop} className="hover:text-white">Datenschutz</Link></li>
+                <li><button type="button" onClick={() => setShowCookieBanner(true)} className="hover:text-white text-left cursor-pointer transition-colors">Datenschutzeinstellungen</button></li>
                 <li><Link to={createPageUrl("FAQ")} onClick={scrollToTop} className="hover:text-white">FAQ</Link></li>
               </ul>
               <div className="flex items-center space-x-3 text-stone-400">

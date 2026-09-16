@@ -38,7 +38,7 @@ export default function NutellaFondue() {
         title="Nutella-Fondue Rezept | In 5 Minuten fertig!"
         description="Schnelles Nutella-Fondue in nur 5 Minuten! Der absolute Party-Hit für Kindergeburtstage und süße Abende. Super einfach!"
         keywords="Nutella Fondue, Nutella Schokofondue, schnelles Dessert, Kindergeburtstag Fondue, einfaches Fondue"
-        canonical="https://caquelon.de/NutellaFondue"
+        canonical="https://caquelon.de/nutellafondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

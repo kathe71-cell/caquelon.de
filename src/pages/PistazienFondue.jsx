@@ -41,7 +41,7 @@ export default function PistazienFondue() {
         title="Pistazien-Schokoladenfondue Rezept | Edles Gourmet-Dessert"
         description="Feinstes Pistazien-Schokoladenfondue aus weißer Schokolade und cremiger Pistaziencreme. Schnell zubereitet und unwiderstehlich lecker!"
         keywords="Pistazien Fondue, Pistazien Schokofondue, Pistaziencreme Fondue, Weißes Schokofondue mit Pistazie"
-        canonical="https://caquelon.de/PistazienFondue"
+        canonical="https://caquelon.de/pistazienfondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

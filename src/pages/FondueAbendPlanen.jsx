@@ -12,9 +12,9 @@ export default function FondueAbendPlanen() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://caquelon.de/FondueAbendPlanen",
-        "url": "https://caquelon.de/FondueAbendPlanen",
-        "name": "Fondue-Abend planen: Mengenkalkulator, Dips & Checkliste 2026",
+        "@id": "https://caquelon.de/fondueabendplanen",
+        "url": "https://caquelon.de/fondueabendplanen",
+        "name": "Fondue-Abend planen: Mengenkalkulator, Dips & Checkliste",
         "description": "Die perfekte Vorbereitung für deinen Fondue-Abend: Mengenkalkulation pro Person, Weinbegleitung, Beilagen und Vorbereitungs-Checkliste."
       },
       {
@@ -47,7 +47,7 @@ export default function FondueAbendPlanen() {
         title="Fondue-Abend planen 2026: Mengenkalkulation, Dips & Checkliste"
         description="So gelingt der perfekte Fondue-Abend! Mengenrechner pro Person, ideale Weinbegleitung, Saucen & Checkliste für Gastgeber."
         keywords="Fondue Abend planen, Fondue Mengen pro Person, wieviel Käse pro Person Fondue, Fondue Vorbereitung, Fondue Zubehör"
-        canonical="https://caquelon.de/FondueAbendPlanen"
+        canonical="https://caquelon.de/fondueabendplanen"
         structuredData={structuredData}
       />
 
@@ -175,7 +175,7 @@ export default function FondueAbendPlanen() {
 
         <FloatingCTABar 
           title="Optimaler Fonduetopf gesucht?"
-          subtitle="Testsieger Caquelons aus Keramik & Gusseisen"
+          subtitle="Caquelons aus Keramik & Gusseisen im Vergleich"
           link={createPageUrl('CaquelonKaufen')}
         />
       </div>

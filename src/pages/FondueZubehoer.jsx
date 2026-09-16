@@ -23,7 +23,7 @@ export default function FondueZubehoer() {
     { 
       title: 'Fondueteller mit 5 Fächern', 
       description: 'Spezialteller mit vertieften Abteilungen. Verhindert, dass Dips, Saucen, Fleisch und Beilagen ineinander verlaufen.', 
-      badge: 'Bestseller',
+      badge: 'PRAKTISCH',
       link: "https://amzn.to/3Vv2XzT" 
     },
     { 
@@ -65,7 +65,7 @@ export default function FondueZubehoer() {
         title="Fondue Zubehör 2026: Was man wirklich für den Fondue-Abend braucht"
         description="Checkliste für essentielles Fondue-Zubehör: Fonduegabeln, Rechauds, Sicherheits-Brenngel, Fächerteller & Induktions-Adapterplatten."
         keywords="Fondue Zubehör, Fonduegabeln, Rechaud Brenner, Brennpaste Fondue, Fondueteller Fächer, Induktionsplatte Caquelon"
-        canonical="https://caquelon.de/FondueZubehoer"
+        canonical="https://caquelon.de/fonduezubehoer"
         structuredData={structuredData}
       />
 
@@ -129,15 +129,15 @@ export default function FondueZubehoer() {
                 Entdecke durchdachte Fonduesets inklusive Caquelon, Rechaud, Brenner und farbcodierten Gabeln.
               </p>
               <CTAButton href="https://amzn.to/4oVKIMA" size="large" variant="secondary">
-                Testsieger Fonduesets ansehen *
+                Passende Fonduesets ansehen *
               </CTAButton>
             </div>
           </div>
         </section>
 
         <FloatingCTABar 
-          title="Fonduetopf Kaufberatung 2026"
-          subtitle="Top 3 Modelle aus Keramik, Gusseisen & Edelstahl"
+          title="Fonduetopf Kaufberatung"
+          subtitle="Modelle aus Keramik, Gusseisen &amp; Edelstahl"
           link={createPageUrl('CaquelonKaufen')}
         />
       </div>

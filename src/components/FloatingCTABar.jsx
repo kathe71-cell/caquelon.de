@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ShoppingCart, Star, ShieldCheck, X } from 'lucide-react';
+import { ShoppingCart, ShieldCheck, X } from 'lucide-react';
 import CTAButton from './CTAButton';
 
 export default function FloatingCTABar({ 
-  title = "Auf der Suche nach dem besten Fonduetopf?", 
-  subtitle = "Kuhn Rikon 'Zermatt' - Testsieger 2026 bei Amazon",
+  title = "Auf der Suche nach dem passenden Fonduetopf?", 
+  subtitle = "Kuhn Rikon, Le Creuset & Spring im Modell-Vergleich",
   link = "https://amzn.to/4oVKIMA"
 }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,7 +29,7 @@ export default function FloatingCTABar({
   return (
     <aside 
       role="region"
-      aria-label="Schnell-Kauf Empfehlung"
+      aria-label="Kauf-Empfehlung"
       aria-live="polite"
       className="fixed bottom-4 left-4 right-4 md:left-auto md:right-6 md:max-w-md z-40 bg-stone-900/95 backdrop-blur-md text-white rounded-2xl p-4 shadow-2xl border border-stone-700/60 transition-all duration-500"
     >
@@ -48,8 +48,8 @@ export default function FloatingCTABar({
 
         <div className="flex-1 pr-4">
           <div className="flex items-center gap-1 text-amber-400 text-xs font-bold mb-0.5">
-            <Star className="w-3.5 h-3.5 fill-amber-400" />
-            <span>4.9 / 5.0 (Bestseller)</span>
+            <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
+            <span>Faktenbasierter Vergleich</span>
           </div>
           <h4 className="text-sm font-bold text-white line-clamp-1">{title}</h4>
           <p className="text-xs text-stone-300 line-clamp-1">{subtitle}</p>
@@ -58,7 +58,7 @@ export default function FloatingCTABar({
 
       <div className="mt-3">
         <CTAButton href={link} size="small" className="w-full text-sm py-2.5 bg-red-800 hover:bg-red-700">
-          <ShoppingCart className="w-4 h-4 mr-2" /> Angebot bei Amazon prüfen *
+          <ShoppingCart className="w-4 h-4 mr-2" /> Angebote bei Amazon prüfen *
         </CTAButton>
       </div>
     </aside>

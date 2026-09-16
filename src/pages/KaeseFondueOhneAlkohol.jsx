@@ -65,7 +65,7 @@ export default function KaeseFondueOhneAlkohol() {
         title="Käsefondue ohne Alkohol Rezept für Familien | Caquelon.de"
         description="Leckeres Käsefondue ohne Alkohol für Familie mit Kindern. Mit Traubensaft statt Wein - genauso cremig und lecker!"
         keywords="Käsefondue ohne Alkohol, alkoholfreies Fondue, Fondue für Kinder, familienfreundliches Käsefondue"
-        canonical="https://caquelon.de/KaeseFondueOhneAlkohol"
+        canonical="https://caquelon.de/kaesefondueohnealkohol"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

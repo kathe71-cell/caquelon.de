@@ -37,14 +37,14 @@ export default function AsiaFondue() {
 
         <section className="py-16">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12">
-            <IngredientCalculator baseServings={baseServings} ingredients={ingredients} />
+            <IngredientCalculator baseServings={baseServings} ingredients={ingredients} category="bruehe" />
             <div className="bg-white rounded-2xl p-8 shadow-lg">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Zubereitung</h2>
               <ol className="space-y-4 text-gray-700">
                 <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>Zitronengras leicht zerdrücken. Kokosmilch, Brühe, Currypaste, Zitronengras und Ingwer im Caquelon erhitzen.</li>
                 <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>Die Brühe 10 Minuten köcheln lassen, damit sich die Aromen entfalten.</li>
                 <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>Zitronengras und Ingwer entfernen. Das Caquelon auf das Rechaud stellen.</li>
-                <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>Fleisch und Gemüse auf Fonduegabeln spießen und in der würzigen Kokos-Curry-Brühe garen.</li>
+                <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>Fleisch und Gemüse auf Fonduegabeln oder in Körbchen garen. <strong>Wichtiger BfR-Hinweis:</strong> Hähnchenbrust muss stets vollständig durchgegart werden (mind. 70 °C im Kern für mind. 2 Min.), niemals halbroh verzehren.</li>
               </ol>
             </div>
           </div>

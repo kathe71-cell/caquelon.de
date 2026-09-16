@@ -65,7 +65,7 @@ export default function ChiliCheeseFondue() {
         title="Feuriges Chili-Käsefondue Rezept | Scharf & Würzig"
         description="Scharfes Käsefondue mit Jalapeños und Cayennepfeffer. Perfekt für alle, die es heiß mögen!"
         keywords="Chili Käsefondue, scharfes Fondue, Jalapeño Fondue, mexikanisches Fondue"
-        canonical="https://caquelon.de/ChiliCheeseFondue" 
+        canonical="https://caquelon.de/chilicheesefondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

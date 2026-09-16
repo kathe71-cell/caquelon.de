@@ -1,117 +1,70 @@
 import React, { useState } from 'react';
-import { Flame, Users, Sparkles, CheckCircle2, ArrowRight, Star, ShoppingCart } from 'lucide-react';
+import { Flame, Users, Sparkles, CheckCircle2, ArrowRight, ShieldAlert, Info, ExternalLink } from 'lucide-react';
 import CTAButton from './CTAButton';
 import { createPageUrl } from '@/utils';
-
-const quizData = [
-  {
-    id: "kaese-induktion",
-    type: "Käsefondue (Induktion)",
-    match: "Kuhn Rikon 'Zermatt' Induktions-Caquelon",
-    material: "Feuerfeste Ton-Keramik mit Induktionsboden",
-    why: "Speichert die Hitze optimal, brennt nicht an und funktioniert direkt auf allen Induktionskochfeldern.",
-    price: "ca. 89 - 110 €",
-    rating: "4.9 / 5.0 (Bestseller)",
-    image: "🧀",
-    link: "https://amzn.to/4oVKIMA",
-    recipeLink: createPageUrl("SchweizerKaeseFondue"),
-    recipeTitle: "Original Schweizer Moitié-Moitié"
-  },
-  {
-    id: "kaese-klassisch",
-    type: "Käsefondue (Klassisch / Gas / Ceran)",
-    match: "Le Creuset Gusseisen-Caquelon 22cm",
-    material: "Emailliertes Gusseisen",
-    why: "Extrem langlebiger Klassiker. Gusseisen sorgt für die perfekte knusprige 'Grossmutter'-Käsekruste am Boden.",
-    price: "ca. 149 - 180 €",
-    rating: "4.8 / 5.0 (Premium)",
-    image: "🫕",
-    link: "https://amzn.to/4oVKIMA",
-    recipeLink: createPageUrl("SchweizerKaeseFondue"),
-    recipeTitle: "Schweizer Käsefondue Rezept"
-  },
-  {
-    id: "fleisch-oel",
-    type: "Fleischfondue in Öl (Bourguignonne)",
-    match: "Spring Edelstahl-Fondueset mit Spritzschutz",
-    material: "Hochglanz-Edelstahl 18/10",
-    why: "Hitze-unempfindlich für sprudelnd heißes Öl. Inklusive Spritzschutz-Ring gegen Ölspritzer am Tisch.",
-    price: "ca. 99 - 129 €",
-    rating: "4.7 / 5.0 (Testsieger Öl)",
-    image: "🥩",
-    link: "https://amzn.to/464y1aB",
-    recipeLink: createPageUrl("FondueBourguignonne"),
-    recipeTitle: "Fondue Bourguignonne Rezept"
-  },
-  {
-    id: "bruehe-chinoise",
-    type: "Fleisch & Gemüse in Brühe (Chinoise / Asia)",
-    match: "Edelstahl-Fondueset mit 6 Siebkörbchen",
-    material: "Edelstahl mit Siebkörben",
-    why: "Kalorienarm und gesund. Die Edelstahlsiebe ermöglichen einfaches Herausfischen von Fleisch & Gemüse.",
-    price: "ca. 69 - 89 €",
-    rating: "4.7 / 5.0 (Preis-Leistung)",
-    image: "🥦",
-    link: "https://amzn.to/45s2s4M",
-    recipeLink: createPageUrl("FondueChinoise"),
-    recipeTitle: "Fondue Chinoise Rezept"
-  },
-  {
-    id: "dessert-schoko",
-    type: "Schokoladenfondue & Desserts",
-    match: "Keramik-Schokofondue mit Rechaud-Teelicht",
-    material: "Feine Keramik mit Teelicht-Brenner",
-    why: "Sanfte Hitze durch ein Teelicht verhindert, dass die Schokolade verbrennt oder graue Schlieren zieht.",
-    price: "ca. 24 - 39 €",
-    rating: "4.9 / 5.0 (Geschenk-Tipp)",
-    image: "🍫",
-    link: "https://amzn.to/4c4GZLx",
-    recipeLink: createPageUrl("SchokoladenFondue"),
-    recipeTitle: "Schokofondue Rezept"
-  }
-];
+import { getRecommendedPot } from '../data/products';
 
 export default function FondueFinderQuiz() {
   const [fondueType, setFondueType] = useState("kaese");
   const [stovetop, setStovetop] = useState("induktion");
   const [people, setPeople] = useState("4");
 
-  const getResult = () => {
-    if (fondueType === "schoko") return quizData[4];
-    if (fondueType === "oel") return quizData[2];
-    if (fondueType === "bruehe") return quizData[3];
-    if (stovetop === "induktion") return quizData[0];
-    return quizData[1];
+  const recommendation = getRecommendedPot({ fondueType, stovetop, people });
+  const product = recommendation.product;
+
+  const getRecipeDetails = () => {
+    if (fondueType === "schoko") {
+      return {
+        url: createPageUrl("SchokoladenFondue"),
+        title: "Klassisches Schokoladenfondue Rezept"
+      };
+    }
+    if (fondueType === "oel") {
+      return {
+        url: createPageUrl("FondueBourguignonne"),
+        title: "Fondue Bourguignonne (Öl-Fondue) Rezept"
+      };
+    }
+    if (fondueType === "bruehe") {
+      return {
+        url: createPageUrl("FondueChinoise"),
+        title: "Fondue Chinoise (Brühe-Fondue) Rezept"
+      };
+    }
+    return {
+      url: createPageUrl("SchweizerKaeseFondue"),
+      title: "Original Schweizer Käsefondue (Moitié-Moitié)"
+    };
   };
 
-  const result = getResult();
+  const recipe = getRecipeDetails();
 
   return (
     <div className="bg-gradient-to-br from-stone-900 via-stone-900 to-red-950 text-white rounded-3xl p-6 md:p-10 shadow-2xl border border-stone-800 my-10">
       <div className="text-center max-w-3xl mx-auto mb-8">
         <div className="inline-flex items-center gap-2 bg-amber-400/10 border border-amber-400/30 px-3.5 py-1 rounded-full text-amber-300 text-xs font-bold uppercase mb-4">
           <Sparkles className="w-4 h-4" />
-          <span>Interaktiver Berater 2026</span>
+          <span>Interaktiver Topf- &amp; Materialberater</span>
         </div>
         <h2 className="text-2xl md:text-4xl font-extrabold tracking-tight text-white">
-          Welcher <span className="text-amber-400">Fonduetopf</span> passt zu deinem Abend?
+          Welcher <span className="text-amber-400">Fonduetopf</span> passt zu deinen Plänen?
         </h2>
         <p className="text-stone-300 text-sm md:text-base mt-2">
-          Wähle deine Präferenzen und finde in 3 Klicks das perfekte Caquelon & Rezept.
+          Wähle Fondue-Art, Herd und Gästezahl für eine fundierte Empfehlung nach Materialphysik und Sicherheit.
         </p>
       </div>
 
-      {/* Quiz Controls */}
+      {/* 3-Faktor Quiz Controls */}
       <div className="grid md:grid-cols-3 gap-6 mb-8 bg-white/5 p-6 rounded-2xl border border-white/10 backdrop-blur-sm">
-        {/* Step 1: Fondue-Art */}
+        {/* Faktor 1: Fondue-Art */}
         <div>
           <label className="block text-xs font-extrabold uppercase text-amber-400 mb-2 flex items-center gap-1.5">
-            <Flame className="w-4 h-4" /> 1. Welches Fondue planst du?
+            <Flame className="w-4 h-4" /> 1. Fondue-Art
           </label>
           <select 
             value={fondueType} 
             onChange={(e) => setFondueType(e.target.value)}
-            className="w-full bg-stone-800 border border-stone-700 text-white text-sm rounded-xl p-3 focus:ring-2 focus:ring-amber-400 outline-none"
+            className="w-full bg-stone-800 border border-stone-700 text-white text-sm rounded-xl p-3 focus:ring-2 focus:ring-amber-400 outline-none cursor-pointer"
           >
             <option value="kaese">🧀 Schweizer Käsefondue</option>
             <option value="oel">🥩 Fleischfondue in Öl (Bourguignonne)</option>
@@ -120,73 +73,114 @@ export default function FondueFinderQuiz() {
           </select>
         </div>
 
-        {/* Step 2: Herd-Art */}
+        {/* Faktor 2: Herdart */}
         <div>
           <label className="block text-xs font-extrabold uppercase text-amber-400 mb-2 flex items-center gap-1.5">
-            <Sparkles className="w-4 h-4" /> 2. Welchen Herd nutzt du?
+            <Sparkles className="w-4 h-4" /> 2. Herd-Art in der Küche
           </label>
           <select 
             value={stovetop} 
             onChange={(e) => setStovetop(e.target.value)}
             disabled={fondueType === "schoko"}
-            className="w-full bg-stone-800 border border-stone-700 text-white text-sm rounded-xl p-3 focus:ring-2 focus:ring-amber-400 outline-none disabled:opacity-50"
+            className="w-full bg-stone-800 border border-stone-700 text-white text-sm rounded-xl p-3 focus:ring-2 focus:ring-amber-400 outline-none disabled:opacity-50 cursor-pointer"
           >
             <option value="induktion">Induktionskochfeld</option>
-            <option value="ceran">Ceran / Elektro</option>
+            <option value="ceran">Ceran / Glaskeramik / Elektro</option>
             <option value="gas">Gasherd</option>
-            <option value="rechaud">Rechaud / Brenner pur</option>
+            <option value="rechaud">Rechaud am Tisch / Ofen</option>
           </select>
         </div>
 
-        {/* Step 3: Personen */}
+        {/* Faktor 3: Personenzahl */}
         <div>
           <label className="block text-xs font-extrabold uppercase text-amber-400 mb-2 flex items-center gap-1.5">
-            <Users className="w-4 h-4" /> 3. Wie viele Personen?
+            <Users className="w-4 h-4" /> 3. Geplante Personenzahl
           </label>
           <select 
             value={people} 
             onChange={(e) => setPeople(e.target.value)}
-            className="w-full bg-stone-800 border border-stone-700 text-white text-sm rounded-xl p-3 focus:ring-2 focus:ring-amber-400 outline-none"
+            className="w-full bg-stone-800 border border-stone-700 text-white text-sm rounded-xl p-3 focus:ring-2 focus:ring-amber-400 outline-none cursor-pointer"
           >
-            <option value="2">2 Personen (Romantisch)</option>
-            <option value="4">4 - 6 Personen (Familie & Freunde)</option>
-            <option value="8">8+ Personen (Große Runde)</option>
+            <option value="2">2 Personen (Gemütlich zu zweit)</option>
+            <option value="4">4 Personen (Klassische Runde)</option>
+            <option value="6">5 - 6 Personen (Große Runde)</option>
+            <option value="8">7 - 8 Personen (Große Runde / Festtag)</option>
+            <option value="12">9 - 12 Personen (Große Party)</option>
           </select>
         </div>
       </div>
 
-      {/* Result Card */}
-      <div className="bg-white text-stone-900 rounded-2xl p-6 md:p-8 shadow-2xl border border-amber-300 flex flex-col md:flex-row items-center justify-between gap-6">
-        <div className="flex items-center gap-5">
-          <div className="w-16 h-16 rounded-2xl bg-amber-100 text-amber-900 flex items-center justify-center font-bold text-4xl shadow-inner flex-shrink-0">
-            {result.image}
-          </div>
+      {/* Dynamisches Ergebnis-Panel */}
+      <div className="bg-stone-800/90 border border-stone-700 rounded-2xl p-6 sm:p-8">
+        <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6 pb-6 border-b border-stone-700">
           <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="bg-red-900 text-white text-[10px] font-extrabold uppercase px-2.5 py-0.5 rounded-full">
-                Perfektes Match
-              </span>
-              <span className="flex items-center gap-1 text-amber-600 text-xs font-bold">
-                <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" /> {result.rating}
-              </span>
+            <div className="inline-flex items-center gap-2 bg-amber-400/20 text-amber-300 text-xs font-extrabold px-3 py-1 rounded-full uppercase mb-2">
+              Passende Empfehlung
             </div>
-            <h3 className="text-xl font-extrabold text-stone-900">{result.match}</h3>
-            <p className="text-xs text-stone-600 font-semibold mt-0.5">{result.material} • {result.price}</p>
-            <p className="text-xs text-stone-700 mt-2 max-w-xl leading-relaxed">{result.why}</p>
+            <h3 className="text-xl sm:text-2xl font-black text-white">
+              {product.name}
+            </h3>
+            <p className="text-xs sm:text-sm text-stone-300 mt-1">
+              Material: <strong className="text-amber-300">{product.material}</strong> • Fassungsvermögen: <strong>{product.capacityLiters} Liter</strong>
+            </p>
+          </div>
+
+          <div className="text-left lg:text-right shrink-0">
+            <span className="text-xs text-stone-400 block font-medium">Richtpreis im Handel:</span>
+            <span className="text-lg sm:text-xl font-mono font-bold text-amber-400">{product.priceRange}</span>
           </div>
         </div>
 
-        <div className="flex flex-col sm:flex-row md:flex-col gap-3 w-full md:w-auto flex-shrink-0">
-          <CTAButton href={result.link} size="default" variant="primary" className="w-full text-center">
-            <ShoppingCart className="w-4 h-4 mr-2" /> Preis bei Amazon prüfen *
-          </CTAButton>
-          <a 
-            href={result.recipeLink}
-            className="text-center text-xs font-bold text-red-900 hover:text-red-700 underline flex items-center justify-center gap-1 py-1"
+        {/* Rationale & Safety Warnings */}
+        <div className="py-5 space-y-3.5 text-xs sm:text-sm text-stone-300 leading-relaxed">
+          <div className="flex items-start gap-2.5">
+            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+            <p>{recommendation.rationale}</p>
+          </div>
+
+          {recommendation.safetyAdvice && (
+            <div className="flex items-start gap-2.5 bg-amber-500/10 border border-amber-500/30 p-3.5 rounded-xl text-amber-200 text-xs">
+              <ShieldAlert className="w-4 h-4 text-amber-400 shrink-0 mt-0.5" />
+              <p>{recommendation.safetyAdvice}</p>
+            </div>
+          )}
+
+          {/* Mehr-Topf-Hinweis für Gruppen ab 7 Personen */}
+          {parseInt(people, 10) >= 7 && (
+            <div className="flex items-start gap-2.5 bg-red-950/70 border border-red-800/80 p-3.5 rounded-xl text-red-200 text-xs font-medium">
+              <Info className="w-4 h-4 text-red-400 shrink-0 mt-0.5" />
+              <div>
+                <strong>Kapazitätsempfehlung für {people} Personen:</strong>
+                <p className="mt-0.5">{recommendation.groupRecommendation.note}</p>
+              </div>
+            </div>
+          )}
+        </div>
+
+        {/* Action CTAs */}
+        <div className="pt-4 border-t border-stone-700/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <a
+            href={recipe.url}
+            className="text-xs sm:text-sm font-bold text-amber-400 hover:text-amber-300 underline flex items-center gap-1.5 order-2 sm:order-1"
           >
-            <span>Passendes Rezept ({result.recipeTitle})</span>
+            <span>Passendes Rezept ansehen: {recipe.title}</span>
             <ArrowRight className="w-3.5 h-3.5" />
           </a>
+
+          <div className="w-full sm:w-auto order-1 sm:order-2">
+            <CTAButton
+              href={product.affiliateLink}
+              variant="secondary"
+              size="medium"
+              className="w-full sm:w-auto flex items-center justify-center gap-1.5"
+            >
+              <span>Verfügbarkeit bei Amazon prüfen *</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+            </CTAButton>
+            <p className="text-[10px] text-stone-400 text-center sm:text-right mt-1">
+              * Werbelink / Partnerlink
+            </p>
+          </div>
         </div>
       </div>
     </div>

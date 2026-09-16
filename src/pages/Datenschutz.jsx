@@ -9,7 +9,7 @@ export default function Datenschutz() {
         title="Datenschutzerklärung (DSGVO) | caquelon.de"
         description="Datenschutzerklärung für caquelon.de. Wir informieren über die Verarbeitung personenbezogener Daten, Cookies und Ihre Rechte nach der DSGVO."
         keywords="Datenschutz, DSGVO, Cookies, personenbezogene Daten"
-        canonical="https://caquelon.de/Datenschutz"
+        canonical="https://caquelon.de/datenschutz"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -42,18 +42,34 @@ export default function Datenschutz() {
                   <li>Uhrzeit der Serveranfrage</li>
                   <li>IP-Adresse</li>
                 </ul>
-                <p>Diese Daten werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet. Unser berechtigtes Interesse liegt in der ordnungsgemäßen Bereitstellung unserer Website. Die Daten werden für die Dauer der Sitzung gespeichert.</p>
-                <div className="bg-blue-50 p-4 rounded-lg">
+                <p>Diese Daten werden auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO verarbeitet. Unser berechtigtes Interesse liegt in der ordnungsgemäßen Bereitstellung und Stabilität unserer Website.</p>
+                <div className="bg-stone-50 p-4 rounded-lg">
                   <p className="font-semibold">Hosting-Anbieter:</p>
                   <p>Vercel Inc., 340 S Lemon Ave #4133, Walnut, CA 91789, USA</p>
-                  <p>Datenschutzerklärung: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener" className="text-blue-600 underline">https://vercel.com/legal/privacy-policy</a></p>
+                  <p>Datenschutzerklärung: <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-red-900 underline">https://vercel.com/legal/privacy-policy</a></p>
                 </div>
               </section>
               
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900">4. Cookies</h2>
+                <h2 className="text-2xl font-semibold text-gray-900">4. Cookies & Einwilligungseinstellungen</h2>
                 <p>Unsere Website verwendet Cookies. Dies sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.</p>
                 
+                <div className="my-6 p-6 bg-stone-50 rounded-2xl border border-stone-200 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                  <div>
+                    <h3 className="text-lg font-bold text-gray-900 m-0">Ihre Datenschutzeinstellungen</h3>
+                    <p className="text-sm text-gray-600 m-0 mt-1">Hier können Sie Ihre Cookie- und Tracking-Präferenzen jederzeit einsehen und anpassen.</p>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => {
+                      window.dispatchEvent(new CustomEvent('open-cookie-settings'));
+                    }}
+                    className="inline-flex items-center justify-center px-5 py-2.5 bg-red-900 hover:bg-red-800 text-white text-sm font-semibold rounded-xl transition-colors shadow-sm shrink-0"
+                  >
+                    Einstellungen öffnen
+                  </button>
+                </div>
+
                 <h3 className="text-lg font-semibold text-gray-900 mt-4">Arten von Cookies:</h3>
                 <div className="space-y-4">
                   <div className="bg-gray-50 p-4 rounded-lg">
@@ -63,14 +79,14 @@ export default function Datenschutz() {
                   </div>
                   
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold">Analyse-Cookies (optional)</h4>
-                    <p>Diese Cookies helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem Informationen anonym gesammelt und gemeldet werden.</p>
+                    <h4 className="font-semibold">Analyse & Performance (optional)</h4>
+                    <p>Diese Funktionen helfen uns zu verstehen, wie Besucher mit unserer Website interagieren, indem Informationen aggregiert und pseudonymisiert gemessen werden.</p>
                     <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
                   </div>
                   
                   <div className="bg-gray-50 p-4 rounded-lg">
-                    <h4 className="font-semibold">Marketing-Cookies (optional)</h4>
-                    <p>Diese Cookies werden verwendet, um Ihnen relevante Werbung zu zeigen.</p>
+                    <h4 className="font-semibold">Marketing & Partnerlinks (optional)</h4>
+                    <p>Diese Cookies werden verwendet, um Verkäufe über Partnerlinks (z. B. Amazon PartnerNet) zuzuordnen.</p>
                     <p><strong>Rechtsgrundlage:</strong> Art. 6 Abs. 1 lit. a DSGVO (Einwilligung)</p>
                   </div>
                 </div>

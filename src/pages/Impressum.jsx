@@ -10,7 +10,7 @@ export default function Impressum() {
         title="Impressum | caquelon.de"
         description="Impressum und rechtliche Hinweise für die Website caquelon.de, betrieben von Jens Kathe."
         keywords="Impressum, Kontakt, Anschrift, Rechtliches"
-        canonical="https://caquelon.de/Impressum"
+        canonical="https://caquelon.de/impressum"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
@@ -56,30 +56,12 @@ export default function Impressum() {
               <section>
                 <h2 className="text-2xl font-semibold text-gray-900 mb-4">Verantwortlich für den Inhalt</h2>
                 <p className="text-gray-700">
-                  Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV: Jens Kathe (Anschrift wie oben)
+                  Verantwortlich für journalistisch-redaktionelle Inhalte nach § 18 Abs. 2 MStV: Jens Kathe (Anschrift wie oben)
                 </p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">EU-Streitschlichtung</h2>
-                <p className="text-gray-700 mb-4">
-                  Die Europäische Kommission stellt eine Plattform zur Online-Streitbeilegung (OS) bereit:
-                </p>
-                <a 
-                  href="https://ec.europa.eu/consumers/odr/" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-red-900 hover:text-red-700 underline"
-                >
-                  https://ec.europa.eu/consumers/odr/
-                </a>
-                <p className="text-gray-700 mt-4">
-                  Unsere E-Mail-Adresse finden Sie oben im Impressum.
-                </p>
-              </section>
-
-              <section>
-                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+                <h2 className="text-2xl font-semibold text-gray-900 mb-4">Verbraucherstreitbeilegung (§ 36 VSBG)</h2>
                 <p className="text-gray-700">
                   Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.
                 </p>
