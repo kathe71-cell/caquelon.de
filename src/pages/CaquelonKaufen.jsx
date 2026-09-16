@@ -253,8 +253,8 @@ export default function CaquelonKaufen() {
               </div>
 
               <div className="flex-shrink-0 w-full md:w-auto">
-                <CTAButton href="https://amzn.to/4oVKIMA" variant="secondary" size="large" className="w-full">
-                  Induktions-Set kaufen *
+                <CTAButton href="https://amzn.to/4fSioGv" variant="secondary" size="large" className="w-full">
+                  Induktionsgeeignetes Gusseisen-Set ansehen *
                 </CTAButton>
               </div>
             </div>
