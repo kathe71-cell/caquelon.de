@@ -54,13 +54,13 @@ export default function ProductGraphic({ productId, className = "w-full h-44" })
     );
   }
 
-  if (productId === 'staub-gusseisen-fondueset') {
+  if (productId === 'le-creuset-gusseisen' || productId.includes('gusseisen')) {
     return (
       <div className={`relative ${className} rounded-2xl overflow-hidden bg-gradient-to-br from-stone-100 via-rose-50/50 to-stone-200/70 border border-stone-200/80 flex items-center justify-center p-4 select-none`}>
         {/* Subtle decorative background pattern */}
         <div className="absolute inset-0 opacity-[0.03] bg-[radial-gradient(#1c1917_1px,transparent_1px)] [background-size:12px_12px]" />
 
-        {/* Vector Illustration: Staub Cast Iron Fondue Set */}
+        {/* Vector Illustration: Le Creuset Gourmet / Tradition Enamelled Cast Iron Fondue Set */}
         <svg viewBox="0 0 320 180" className="w-full h-full max-h-36 drop-shadow-md" fill="none" xmlns="http://www.w3.org/2000/svg">
           {/* Rechaud Base & Legs */}
           <ellipse cx="160" cy="165" rx="75" ry="9" fill="#000000" fillOpacity="0.1" />
