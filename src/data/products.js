@@ -41,8 +41,6 @@ export const PRODUCTS = [
       "Nicht direkt induktionsgeeignet (erfordert Adapterplatte)",
       "Empfindlich gegen Thermoschock (kein kaltes Wasser in den heißen Topf)"
     ],
-    image: "https://images.unsplash.com/photo-1541544741938-0af808871cc0?q=80&w=800&auto=format&fit=crop",
-    imageLabel: "Symbolbild: Schweizer Käsefondue in traditionellem Keramik-Caquelon",
     affiliateLink: "https://amzn.to/4oVKIMA",
     highlightTag: "Traditioneller Keramik-Klassiker"
   },
@@ -81,8 +79,6 @@ export const PRODUCTS = [
       "Hohes Eigengewicht (ca. 4,5 kg inklusive Rechaud)",
       "Gusseisengriff wird am Herd heiß (Topflappen erforderlich)"
     ],
-    image: "https://images.unsplash.com/photo-1576867757603-05b134ebc379?q=80&w=800&auto=format&fit=crop",
-    imageLabel: "Symbolbild: Emaillierter Gusseisen-Fonduetopf",
     affiliateLink: "https://amzn.to/4fSioGv",
     highlightTag: "Allrounder für alle Herdarten & Fonduearten"
   },
@@ -110,7 +106,7 @@ export const PRODUCTS = [
     },
     allowedFondueTypes: ["oel", "bruehe"],
     disallowedFondueTypes: ["kaese"],
-    safetyNotice: "Inklusive aufsetzbarem Edelstahl-Spritzschutzring. Für Käsefondue nur bedingt empfohlen (dünnere Seitenwandung führt schneller zu partiellem Anbrennen am Boden als dickwandige Keramik).",
+    safetyNotice: "Inklusive aufsetzbarem Edelstahl-Spritzschutzring. Topfkapazität 1,8 Liter: Maximale Ölfüllung für Fondue Bourguignonne beträgt 1/3 bis 1/2 der Topfhöhe (max. 0,75–0,9 Liter Öl), da heißes Fett beim Eintauchen stark aufschäumt. Für Käsefondue nur bedingt empfohlen.",
     priceRange: "ca. 89 - 120 €",
     pros: [
       "Spezialist für heißes Öl (Bourguignonne) und Brühe (Chinoise / Bacchus)",
@@ -121,8 +117,6 @@ export const PRODUCTS = [
       "Für reines Käsefondue weniger geeignet (geringere thermische Trägheit als Keramik)",
       "Topfwand wird außen sehr heiß"
     ],
-    image: "https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=800&auto=format&fit=crop",
-    imageLabel: "Symbolbild: Edelstahl-Fonduetopf mit Spritzschutz",
     affiliateLink: "https://amzn.to/3JoYc39",
     highlightTag: "Spezialist für Fett- & Brühefondue"
   }

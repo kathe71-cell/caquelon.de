@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Check, Flame, Sparkles, ExternalLink, ShieldAlert, Info } from 'lucide-react';
 import CTAButton from './CTAButton';
+import ProductGraphic from './ProductGraphic';
 import { PRODUCTS } from '../data/products';
 
 export default function ProductComparisonTable() {
@@ -109,17 +110,9 @@ export default function ProductComparisonTable() {
                 Hersteller: <strong>{product.manufacturer}</strong> • Art.-Nr.: {product.articleNumber}
               </p>
 
-              {/* Product Image (with explicit Symbolbild labeling) */}
-              <div className="relative h-44 rounded-2xl overflow-hidden mb-5 bg-stone-200 border border-stone-300/60">
-                <img 
-                  src={product.image} 
-                  alt={product.imageLabel}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
-                />
-                <span className="absolute bottom-1.5 right-1.5 text-[9px] bg-black/60 text-white/90 px-2 py-0.5 rounded-md backdrop-blur-xs font-medium">
-                  Symbolbild
-                </span>
+              {/* Product Vector Graphic */}
+              <div className="mb-5">
+                <ProductGraphic productId={product.id} className="w-full h-44" />
               </div>
 
               {/* Key Specs Table */}

@@ -9,7 +9,7 @@ const baseServings = 4;
 const ingredients = [
   { name: 'Rinderfilet / Hüfte, trockengetupft', quantity: 600, unit: 'g' },
   { name: 'Puten- oder Hähnchenbrust (stets durchgaren!)', quantity: 300, unit: 'g' },
-  { name: 'Pflanzenöl (hitzebeständig, z. B. Raps- oder Sonnenblumenöl)', quantity: 1, unit: 'Liter' },
+  { name: 'Pflanzenöl (hitzebeständig; max. 1/3–1/2 Topffüllung)', quantity: 0.85, unit: 'Liter' },
   { name: 'Rosmarinzweig & Knoblauchzehe', quantity: 2, unit: 'Stück' },
   { name: 'Verschiedene Dips & Saucen', quantity: 'nach Belieben', unit: '' }
 ];
@@ -136,7 +136,7 @@ export default function FondueBourguignonne() {
                 </li>
                 <li className="flex gap-4">
                   <div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold shrink-0">2</div>
-                  <span>Das Pflanzenöl im Fondue-Topf auf dem Herd auf ca. 175–180 °C erhitzen. Holzstäbchen-Test: Bilden sich Bläschen, ist das Fett heiß genug.</span>
+                  <span>Das Pflanzenöl (ca. 0,75–0,9 l bei einem 1,8-L-Topf; Herstellerfüllgrenze von maximal 1/2 Topfhöhe strikt beachten!) im Fondue-Topf auf dem Herd auf ca. 175–180 °C erhitzen. Holzstäbchen-Test: Bilden sich feine Bläschen, ist das Fett heiß genug.</span>
                 </li>
                 <li className="flex gap-4">
                   <div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold shrink-0">3</div>

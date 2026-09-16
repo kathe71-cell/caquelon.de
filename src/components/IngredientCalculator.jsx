@@ -19,18 +19,20 @@ export default function IngredientCalculator({
     
     // Lineare Skalierung für reguläre Zutaten
     // Ausnahme: Öl und Brühe im Fonduetopf dürfen nicht unbeschränkt wachsen!
-    const isOilOrBrothBase = ingredient.name.toLowerCase().includes('öl') || 
-                             ingredient.name.toLowerCase().includes('pflanzenöl') ||
-                             ingredient.name.toLowerCase().includes('brühe') ||
-                             ingredient.name.toLowerCase().includes('bouillon');
+    const isOil = ingredient.name.toLowerCase().includes('öl') || 
+                  ingredient.name.toLowerCase().includes('oel') ||
+                  ingredient.name.toLowerCase().includes('pflanzenöl');
+    const isBroth = ingredient.name.toLowerCase().includes('brühe') ||
+                    ingredient.name.toLowerCase().includes('bouillon');
 
-    if (isOilOrBrothBase && (ingredient.unit.toLowerCase() === 'liter' || ingredient.unit.toLowerCase() === 'l')) {
-      // 1 Topf fasst ca. 1.0 - 1.2 L; ab 7 Personen 2 Töpfe = 2.0 L
-      if (servings <= 6) {
-        return 1.0;
-      } else {
-        return 2.0;
-      }
+    if (isOil && (ingredient.unit.toLowerCase() === 'liter' || ingredient.unit.toLowerCase() === 'l')) {
+      // Herstellerfüllgrenze hat Vorrang: 1,8-L-Topf max. zu 1/3 bis 1/2 befüllen -> ca. 0,85 L pro Topf
+      return servings <= 6 ? 0.85 : 1.7;
+    }
+
+    if (isBroth && (ingredient.unit.toLowerCase() === 'liter' || ingredient.unit.toLowerCase() === 'l')) {
+      // 1 Topf fasst ca. 1.0 - 1.2 L; ab 7 Personen 2 Töpfe = 2.4 L
+      return servings <= 6 ? 1.2 : 2.4;
     }
 
     const calculated = (rawVal / baseServings) * servings;
@@ -38,6 +40,33 @@ export default function IngredientCalculator({
       return parseFloat(calculated.toFixed(1));
     }
     return Math.round(calculated);
+  };
+
+  // Berechnet die tatsächliche Summe aller Fleisch- und Fischzutaten direkt aus der Zutatenliste
+  const calculateTotalMeat = () => {
+    const meatKeywords = ['rind', 'hähnchen', 'puten', 'schwein', 'kalb', 'fleisch', 'filet', 'hüfte', 'ente', 'lamm', 'fisch', 'lachs', 'garnele', 'tofu'];
+    const meatItems = ingredients.filter(item => {
+      const nameLower = (item.name || '').toLowerCase();
+      const unitLower = (item.unit || '').toLowerCase();
+      const isWeight = unitLower === 'g' || unitLower === 'gramm' || unitLower === 'kg';
+      return isWeight && meatKeywords.some(kw => nameLower.includes(kw));
+    });
+
+    if (meatItems.length > 0) {
+      let totalGrams = 0;
+      meatItems.forEach(item => {
+        const rawVal = item.quantity !== undefined ? item.quantity : item.amount;
+        if (typeof rawVal === 'number') {
+          const scaled = (rawVal / baseServings) * servings;
+          const inGrams = (item.unit || '').toLowerCase() === 'kg' ? scaled * 1000 : scaled;
+          totalGrams += inGrams;
+        }
+      });
+      return Math.round(totalGrams);
+    }
+
+    // Fallback falls keine Keyword-Treffer
+    return Math.round(servings * 225);
   };
 
   // Bestimme den effektiven Rezepttyp (falls nicht explizit übergeben, anhand der Zutaten erkennen)
@@ -140,7 +169,7 @@ export default function IngredientCalculator({
         <div className="bg-amber-50/80 border border-amber-200 rounded-2xl p-4 text-xs space-y-3 text-stone-700">
           <div className="flex items-center gap-2 font-bold text-amber-950">
             <Scale className="w-4 h-4 text-amber-800" />
-            <span>Raclette Richtwerte (200–250 g Käse pro Kopf):</span>
+            <span>Raclette Richtwerte (220 g Käse &amp; 200 g Kartoffeln pro Person):</span>
           </div>
           <div className="grid grid-cols-2 gap-2 text-[11px]">
             <div className="bg-white p-2.5 rounded-xl border border-amber-200/80">
@@ -167,20 +196,26 @@ export default function IngredientCalculator({
           <div className="grid grid-cols-2 gap-2 text-[11px]">
             <div className="bg-white p-2.5 rounded-xl border border-red-200/80">
               <span className="text-stone-500 block">Fleisch-Gesamtmenge:</span>
-              <strong className="text-stone-900 text-xs">{servings * 220} g ({Math.round(servings * 220 / 1000 * 10) / 10} kg)</strong>
+              <strong className="text-stone-900 text-xs">{calculateTotalMeat().toLocaleString('de-DE')} g ({Math.round(calculateTotalMeat() / 100) / 10} kg)</strong>
+              <span className="text-[10px] text-stone-500 block mt-0.5">
+                (entspricht {Math.round(calculateTotalMeat() / servings)} g p.P.)
+              </span>
             </div>
             <div className="bg-white p-2.5 rounded-xl border border-red-200/80">
               <span className="text-stone-500 block">Ölmenge im Topf:</span>
-              <strong className="text-stone-900 text-xs">{servings <= 6 ? 'ca. 1,0 Liter (1 Topf)' : 'ca. 2,0 Liter (auf 2 Töpfe verteilt)'}</strong>
+              <strong className="text-stone-900 text-xs">{servings <= 6 ? 'ca. 0,75–0,9 l (1 Topf)' : 'ca. 1,5–1,8 l (auf 2 Töpfe verteilt)'}</strong>
+              <span className="text-[10px] text-stone-500 block mt-0.5">
+                (Herstellergrenze max. 1/2 Füllung!)
+              </span>
             </div>
           </div>
           <div className="flex items-start gap-2 bg-red-100/90 p-2.5 rounded-xl text-[11px] text-red-950">
             <AlertTriangle className="w-4 h-4 shrink-0 mt-0.5 text-red-800" />
             <div>
-              <strong>Hersteller-Füllgrenze beachten:</strong> Das Pflanzenöl darf den Fonduetopf <strong>maximal zu 1/3 bis 1/2</strong> füllen, da es beim Eintauchen des Fleischs stark aufschäumt.
+              <strong>Herstellerfüllgrenze hat Vorrang vor Pauschalwerten:</strong> Die Topfkapazität (z. B. 1,8 Liter beim Spring-Set) darf beim Frittieren <strong>maximal zu 1/3 bis 1/2 befüllt werden (ca. 0,75 bis maximal 0,9 Liter Öl pro Topf)</strong>. Niemals einen vollen Liter Öl in einen 1,8-Liter-Topf füllen, da heißes Fett beim Eintauchen des Fleisches stark aufschäumt und überschwappen kann.
               {servings >= 7 && (
                 <span className="block mt-1 font-semibold">
-                  Ab 7 Personen dringend einen zweiten Fonduetopf aufstellen, um Überfüllung und ein Absinken der Öltemperatur unter 170 °C zu verhindern.
+                  Ab 7 Personen zwingend einen zweiten Fonduetopf aufstellen, um Überfüllung zu vermeiden und die Mindestbrattemperatur (175 °C) zu halten.
                 </span>
               )}
             </div>
@@ -197,7 +232,10 @@ export default function IngredientCalculator({
           <div className="grid grid-cols-2 gap-2 text-[11px]">
             <div className="bg-white p-2.5 rounded-xl border border-emerald-200/80">
               <span className="text-stone-500 block">Fleisch / Fisch:</span>
-              <strong className="text-stone-900 text-xs">{servings * 200} g ({Math.round(servings * 200 / 1000 * 10) / 10} kg)</strong>
+              <strong className="text-stone-900 text-xs">{calculateTotalMeat().toLocaleString('de-DE')} g ({Math.round(calculateTotalMeat() / 100) / 10} kg)</strong>
+              <span className="text-[10px] text-stone-500 block mt-0.5">
+                (entspricht {Math.round(calculateTotalMeat() / servings)} g p.P.)
+              </span>
             </div>
             <div className="bg-white p-2.5 rounded-xl border border-emerald-200/80">
               <span className="text-stone-500 block">Gemüse &amp; Pilze:</span>
@@ -206,9 +244,9 @@ export default function IngredientCalculator({
           </div>
           <div className="flex items-start gap-2 bg-emerald-100/90 p-2.5 rounded-xl text-[11px] text-emerald-950">
             <Info className="w-4 h-4 shrink-0 mt-0.5 text-emerald-800" />
-            <span>
-              <strong>Brühe-Tipp:</strong> Grundfüllung {servings <= 6 ? '1,0–1,2 Liter' : 'aufgeteilt auf 2 Töpfe'}. Verdampfte Brühe während des Essens aus einer separaten Kanne mit heißer Brühe nachgießen, statt den Topf zu Beginn zu überfüllen.
-            </span>
+            <div>
+              <strong>Brühe-Tipp:</strong> Grundfüllung {servings <= 6 ? 'ca. 1,0–1,2 Liter' : 'ca. 2,0–2,4 Liter auf 2 Töpfe verteilt'} (stets Füllstandsmarkierung des Topfes beachten). Verdampfte Brühe während des Essens aus einer separaten Kanne mit heißer Brühe nachgießen, statt den Topf zu Beginn zu überfüllen.
+            </div>
           </div>
         </div>
       )}

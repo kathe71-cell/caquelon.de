@@ -34,10 +34,10 @@ const structuredData = {
     },
     {
       "@type": "Question",
-      "name": "Welcher Käse für Raclette?",
+      "name": "Welcher Käse für Raclette und wie viel pro Person?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Am besten eignet sich echter Raclette-Käse aus der Schweiz oder Savoyen. Alternativ funktionieren auch Gouda, Emmentaler oder Appenzeller. Pro Person rechnet man etwa 200-250g Käse."
+        "text": "Am besten eignet sich echter Raclette-Käse aus der Schweiz oder Savoyen. Alternativ funktionieren auch Gouda, Emmentaler oder Appenzeller. Als Standard-Richtwert rechnet man mit ca. 220 g Käse und 200 g festkochenden Kartoffeln (Gschwellti) pro Person."
       }
     }
   ]
@@ -107,8 +107,8 @@ const faqData = [
                 a: "Beim Fondue tauchen alle gemeinsam in einen Topf, beim Raclette bereitet jeder sein Essen individuell in kleinen Pfännchen zu. Raclette ist flexibler bei den Zutaten, Fondue ist geselliger und traditioneller."
             },
             {
-                q: "Welcher Käse für Raclette?",
-                a: "Am besten eignet sich echter Raclette-Käse aus der Schweiz oder Savoyen. Alternativ funktionieren auch Gouda, Emmentaler oder Appenzeller. Pro Person rechnet man etwa 200-250g Käse."
+                q: "Welcher Käse für Raclette und wie viel pro Person?",
+                a: "Am besten eignet sich echter Raclette-Käse aus der Schweiz oder Savoyen. Alternativ funktionieren auch Gouda, Emmentaler oder Appenzeller. Als bewährter Richtwert rechnet man mit ca. 220 g Käse und 200 g festkochenden Kartoffeln (Gschwellti) pro Person."
             },
             {
                 q: "Raclette oder Fondue für Silvester?",
