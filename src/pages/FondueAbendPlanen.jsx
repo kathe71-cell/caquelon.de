@@ -12,8 +12,8 @@ export default function FondueAbendPlanen() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://caquelon.de/fondueabendplanen",
-        "url": "https://caquelon.de/fondueabendplanen",
+        "@id": "https://www.caquelon.de/fondueabendplanen",
+        "url": "https://www.caquelon.de/fondueabendplanen",
         "name": "Fondue-Abend planen: Mengenkalkulator, Dips & Checkliste",
         "description": "Die perfekte Vorbereitung für deinen Fondue-Abend: Mengenkalkulation pro Person, Weinbegleitung, Beilagen und Vorbereitungs-Checkliste."
       },
@@ -47,7 +47,7 @@ export default function FondueAbendPlanen() {
         title="Fondue-Abend planen 2026: Mengenkalkulation, Dips & Checkliste"
         description="So gelingt der perfekte Fondue-Abend! Mengenrechner pro Person, ideale Weinbegleitung, Saucen & Checkliste für Gastgeber."
         keywords="Fondue Abend planen, Fondue Mengen pro Person, wieviel Käse pro Person Fondue, Fondue Vorbereitung, Fondue Zubehör"
-        canonical="https://caquelon.de/fondueabendplanen"
+        canonical="https://www.caquelon.de/fondueabendplanen"
         structuredData={structuredData}
       />
 

@@ -184,7 +184,7 @@ export default function FAQ() {
                 title="FAQ - Häufige Fragen zu Fondue, Caquelon & Raclette"
                 description="Alle Antworten: Welches Caquelon für Käsefondue? Wie viel Käse pro Person? Was tun, wenn das Fondue klumpt? Tipps für perfekten Fondue-Genuss!"
                 keywords="Fondue FAQ, Caquelon Fragen, Käsefondue klumpt, Fondue wie viel Käse, Raclette Tipps, Fleischfondue Öl"
-                canonical="https://caquelon.de/faq"
+                canonical="https://www.caquelon.de/faq"
                 structuredData={structuredData}
             />
             <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

@@ -39,7 +39,7 @@ export default function TobleroneFondue() {
         title="Toblerone-Schokoladenfondue Rezept | Schweizer Klassiker"
         description="Der Schweizer Klassiker als Schokofondue! Cremige Toblerone mit Honig-Mandel-Stückchen - einfach unwiderstehlich in 10 Min."
         keywords="Toblerone Fondue, Toblerone Schokofondue, Schweizer Schokofondue, Honig Schokolade Fondue"
-        canonical="https://caquelon.de/tobleronefondue"
+        canonical="https://www.caquelon.de/tobleronefondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

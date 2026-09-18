@@ -19,7 +19,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Klassisches Schokoladenfondue",
   "image": [
-    "https://caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization",
@@ -61,7 +61,7 @@ export default function SchokoladenFondue() {
         title="Einfaches Schokoladenfondue Rezept | Der Hit für Partys"
         description="Cremiges Schokofondue in 10 Min selber machen! Das perfekte Dessert-Rezept für Partys, Kindergeburtstage & süße Abende. Inkl. Obst-Tipps."
         keywords="Schokoladenfondue Rezept, Schokofondue selber machen, Dessert Fondue, Schokofondue Früchte, Kindergeburtstag"
-        canonical="https://caquelon.de/schokoladenfondue"
+        canonical="https://www.caquelon.de/schokoladenfondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

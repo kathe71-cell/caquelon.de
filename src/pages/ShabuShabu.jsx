@@ -22,7 +22,7 @@ export default function ShabuShabu() {
       <SEOHead 
         title="Japanisches Shabu-Shabu Fondue Rezept | caquelon.de"
         description="Authentisches japanisches Shabu-Shabu mit hauchdünnen Fleischscheiben in Dashi-Brühe. Ein leichter, gesunder Genuss."
-        canonical="https://caquelon.de/shabushabu"
+        canonical="https://www.caquelon.de/shabushabu"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <section className="py-16 bg-gradient-to-br from-green-50 to-blue-50">

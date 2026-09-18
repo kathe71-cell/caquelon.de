@@ -85,7 +85,7 @@ export default function Layout({ children, currentPageName }) {
   });
   const location = useLocation();
 
-  const mainUrl = `https://caquelon.de`;
+  const mainUrl = `https://www.caquelon.de`;
   const shareTitle = `Entdecke Caquelon.de - Den ultimativen Fondue-Guide!`;
   const shareDescription = `Authentische Fondue-Rezepte, Kaufberatung für Caquelons und alles für gesellige Abende.`;
 

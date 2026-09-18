@@ -10,7 +10,7 @@ export default function Impressum() {
         title="Impressum | caquelon.de"
         description="Impressum und rechtliche Hinweise für die Website caquelon.de, betrieben von Jens Kathe."
         keywords="Impressum, Kontakt, Anschrift, Rechtliches"
-        canonical="https://caquelon.de/impressum"
+        canonical="https://www.caquelon.de/impressum"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

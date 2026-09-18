@@ -75,7 +75,7 @@ export default function RechnerEmbed() {
         <div className="flex items-center gap-1">
           <span>Kostenloses Widget von</span>
           <a
-            href="https://caquelon.de/"
+            href="https://www.caquelon.de/"
             target="_blank"
             rel="noopener"
             title="caquelon.de – Der unabhängige Fondue- & Mengenrechner Ratgeber"

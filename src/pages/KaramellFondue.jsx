@@ -40,7 +40,7 @@ export default function KaramellFondue() {
         title="Gesalzenes Karamell-Fondue Rezept | Süß trifft Salzig"
         description="Eine unwiderstehlich süß-salzige Kombination! Perfekt zu Äpfeln, Brownie-Stücken und Popcorn. In 15 Min fertig."
         keywords="Karamell Fondue, gesalzenes Karamell, Salted Caramel Fondue, süß salzig Dessert, Karamell Dessert"
-        canonical="https://caquelon.de/karamellfondue"
+        canonical="https://www.caquelon.de/karamellfondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

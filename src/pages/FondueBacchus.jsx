@@ -22,7 +22,7 @@ export default function FondueBacchus() {
       <SEOHead 
         title="Fondue Bacchus (Weißwein-Fondue) Rezept | caquelon.de"
         description="Eine elegante Fondue-Variante, bei der Fleisch und Gemüse in siedendem Weißwein gegart werden."
-        canonical="https://caquelon.de/fonduebacchus"
+        canonical="https://www.caquelon.de/fonduebacchus"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <section className="py-16 bg-gradient-to-br from-yellow-50 to-green-50">

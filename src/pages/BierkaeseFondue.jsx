@@ -21,7 +21,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Bierkäse-Fondue mit Brezn",
   "image": [
-    "https://caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization",
@@ -64,7 +64,7 @@ export default function BierkaeseFondue() {
         title="Bierkäse-Fondue mit Brezn Rezept | Caquelon.de"
         description="Ein deftiges Käsefondue mit kräftigem Bier und Kümmel. Perfekt mit Laugenbrezeln für Bayern-Fans!"
         keywords="Bierkäse Fondue, Bier Fondue, bayerisches Fondue, Oktoberfest Fondue"
-        canonical="https://caquelon.de/bierkaesefondue"
+        canonical="https://www.caquelon.de/bierkaesefondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

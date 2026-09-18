@@ -4,9 +4,9 @@ export default function SEOHead({
   title = "Caquelon.de - Dein Fondue-Guide für gesellige Abende",
   description = "Authentische Fondue-Rezepte und Caquelon-Kaufberatung. Von Schweizer Käsefondue bis Schokoladenfondue - alles für gesellige Abende.",
   keywords = "Caquelon, Fondue, Käsefondue, Fleischfondue, Schokoladenfondue, Schweizer, Rezepte, Fonduetopf",
-  canonical = "https://caquelon.de",
+  canonical = "https://www.caquelon.de",
   ogType = "website",
-  ogImage = "https://caquelon.de/og-image.svg",
+  ogImage = "https://www.caquelon.de/og-image.svg",
   structuredData = null,
   gaMeasurementId = null
 }) {

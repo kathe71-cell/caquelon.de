@@ -24,7 +24,7 @@ Allow: /FondueBourguignonne
 Disallow:
 
 # Sitemap-Referenz
-Sitemap: https://caquelon.de/sitemap.xml
+Sitemap: https://www.caquelon.de/sitemap.xml
 
 # Crawl-Verzögerung (optional)
 Crawl-delay: 1`;
@@ -43,7 +43,7 @@ Crawl-delay: 1`;
             <li>Kopiere den Text oben</li>
             <li>Erstelle eine Datei "robots.txt" im Website-Root</li>
             <li>Füge den Text ein</li>
-            <li>Stelle sicher, dass die Datei unter <code className="bg-white px-2 py-1 rounded">https://caquelon.de/robots.txt</code> erreichbar ist</li>
+            <li>Stelle sicher, dass die Datei unter <code className="bg-white px-2 py-1 rounded">https://www.caquelon.de/robots.txt</code> erreichbar ist</li>
           </ol>
         </div>
       </div>

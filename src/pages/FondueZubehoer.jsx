@@ -65,7 +65,7 @@ export default function FondueZubehoer() {
         title="Fondue Zubehör 2026: Was man wirklich für den Fondue-Abend braucht"
         description="Checkliste für essentielles Fondue-Zubehör: Fonduegabeln, Rechauds, Sicherheits-Brenngel, Fächerteller & Induktions-Adapterplatten."
         keywords="Fondue Zubehör, Fonduegabeln, Rechaud Brenner, Brennpaste Fondue, Fondueteller Fächer, Induktionsplatte Caquelon"
-        canonical="https://caquelon.de/fonduezubehoer"
+        canonical="https://www.caquelon.de/fonduezubehoer"
         structuredData={structuredData}
       />
 

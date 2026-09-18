@@ -19,7 +19,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Fondue Bourguignonne (Öl-Fondue)",
   "image": [
-    "https://caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization",
@@ -62,7 +62,7 @@ export default function FondueBourguignonne() {
         title="Fondue Bourguignonne (Öl-Fondue) Rezept & Sicherheit | caquelon.de"
         description="Das klassische Fleischfondue mit Öl. Rezepte, Fleischmengen pro Person und wichtige BfR-Hygienehinweise für sicheres Garen."
         keywords="Fondue Bourguignonne, Fleischfondue, Öl-Fondue, Fondue Rezept, Fleisch garen"
-        canonical="https://caquelon.de/fonduebourguignonne"
+        canonical="https://www.caquelon.de/fonduebourguignonne"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

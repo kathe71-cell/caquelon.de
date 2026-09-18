@@ -34,7 +34,7 @@ export default function FondueRezepte() {
     "@type": "CollectionPage",
     "name": `${RECIPES.length} Fondue Rezepte: Käse, Fleisch & Schokolade`,
     "description": "Erprobte Fondue-Rezepte vom Schweizer Käsefondue über Fleischfondue bis hin zu Schokoladen-Desserts.",
-    "url": "https://caquelon.de/fonduerezepte"
+    "url": "https://www.caquelon.de/fonduerezepte"
   };
 
   return (
@@ -43,7 +43,7 @@ export default function FondueRezepte() {
         title={`${RECIPES.length} Fondue Rezepte: Käse, Fleisch & Schokolade | caquelon.de`}
         description={`Alle ${RECIPES.length} Fondue-Rezepte im Überblick! Vom Schweizer Käsefondue (Moitié-Moitié) über Fleischfondue bis hin zu cremigem Schokofondue mit Mengenumrechner.`}
         keywords="Fondue Rezepte, Käsefondue Rezept, Schokoladenfondue Rezept, Fleischfondue, Caquelon Rezepte, Fondue Ideen"
-        canonical="https://caquelon.de/fonduerezepte"
+        canonical="https://www.caquelon.de/fonduerezepte"
         structuredData={structuredData}
       />
 

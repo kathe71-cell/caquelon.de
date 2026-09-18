@@ -4,7 +4,7 @@ import { createPageUrl } from '@/utils';
 export default function Sitemap() {
   useEffect(() => {
     // Generate XML sitemap
-    const baseUrl = 'https://caquelon.de';
+    const baseUrl = 'https://www.caquelon.de';
     const today = new Date().toISOString().split('T')[0];
     
     const pages = [
@@ -80,7 +80,7 @@ ${pages.map(page => `  <url>
             <li>Kopiere den XML-Code oben</li>
             <li>Erstelle eine Datei "sitemap.xml" in deinem Website-Root</li>
             <li>Füge den XML-Code ein</li>
-            <li>Reiche die Sitemap in der Google Search Console ein: <code className="bg-white px-2 py-1 rounded">https://caquelon.de/sitemap.xml</code></li>
+            <li>Reiche die Sitemap in der Google Search Console ein: <code className="bg-white px-2 py-1 rounded">https://www.caquelon.de/sitemap.xml</code></li>
           </ol>
         </div>
       </div>

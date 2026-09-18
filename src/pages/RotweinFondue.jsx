@@ -21,7 +21,7 @@ export default function RotweinFondue() {
       <SEOHead 
         title="Rotwein-Brühe-Fondue 'Winzer Art' Rezept | caquelon.de"
         description="Ein aromatisches Fleischfondue, bei dem das Fleisch in einer kräftigen Rotwein-Brühe gegart wird."
-        canonical="https://caquelon.de/rotweinfondue"
+        canonical="https://www.caquelon.de/rotweinfondue"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <section className="py-16 bg-gradient-to-br from-purple-100 to-red-100">

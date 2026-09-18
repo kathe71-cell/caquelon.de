@@ -13,12 +13,12 @@ export default function RacletteKaese() {
     "description": "Welcher Käse eignet sich für Raclette? Entdecke die besten Raclette-Käsesorten, Reifung und wo du authentischen Schweizer Raclette-Käse kaufen kannst.",
     "mainEntityOfPage": {
       "@type": "WebPage",
-      "@id": "https://caquelon.de/RacletteKaese"
+      "@id": "https://www.caquelon.de/RacletteKaese"
     },
     "publisher": {
       "@type": "Organization",
       "name": "Caquelon.de",
-      "url": "https://caquelon.de"
+      "url": "https://www.caquelon.de"
     },
     "breadcrumb": {
       "@type": "BreadcrumbList",
@@ -27,13 +27,13 @@ export default function RacletteKaese() {
           "@type": "ListItem",
           "position": 1,
           "name": "Home",
-          "item": "https://caquelon.de/"
+          "item": "https://www.caquelon.de/"
         },
         {
           "@type": "ListItem",
           "position": 2,
           "name": "Raclette Käse",
-          "item": "https://caquelon.de/raclettekaese"
+          "item": "https://www.caquelon.de/raclettekaese"
         }
       ]
     }
@@ -45,7 +45,7 @@ export default function RacletteKaese() {
         title="Raclette Käse kaufen: Schweizer AOP Käsesorten für Raclette"
         description="Welcher Käse eignet sich für Raclette? Entdecke die besten Raclette-Käsesorten, Reifung und wo du authentischen Schweizer Raclette-Käse kaufen kannst."
         keywords="Raclette Käse, Käse für Raclette, Raclette du Valais, Schweizer Raclette Käse, Raclette Käse kaufen"
-        canonical="https://caquelon.de/raclettekaese"
+        canonical="https://www.caquelon.de/raclettekaese"
         structuredData={structuredData}
       />
 

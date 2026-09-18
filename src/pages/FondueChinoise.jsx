@@ -20,7 +20,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Fondue Chinoise (Brühe-Fondue)",
   "image": [
-    "https://caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization",
@@ -63,7 +63,7 @@ export default function FondueChinoise() {
         title="Fondue Chinoise (Brühe-Fondue) Rezept & Anleitung | caquelon.de"
         description="Leichtes Festtags-Fondue mit heißer Brühe. Exakte Mengenkalkulation für Fleisch und Gemüse, Saucenideen und BfR-Gartipps."
         keywords="Fondue Chinoise, Brühe-Fondue, Fleischfondue, Festtagsfondue"
-        canonical="https://caquelon.de/fonduechinoise"
+        canonical="https://www.caquelon.de/fonduechinoise"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

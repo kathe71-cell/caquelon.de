@@ -3,11 +3,11 @@
 > Das unabhängige Schweizer Fondue- und Caquelon-Fachportal: Materialvergleiche (Gusseisen, Keramik, Ton), Wärmeleitfähigkeits-Physik, Käsemengen-Rechner, traditionelle Schweizer Rezepte und Pflegetipps.
 
 ## Kern-Ressourcen
-- [Startseite](https://caquelon.de/): Kaufratgeber, Materialkunde, Rechner-Tools.
-- [Material-Vergleich](https://caquelon.de/Materialien): Keramik vs. Gusseisen vs. Steingut – Wärmespeicherung und Vor- & Nachteile.
-- [Mengen-Rechner](https://caquelon.de/Rechner): Exakte Berechnung von Käse-, Wein- und Stärkemengen nach Personenzahl.
-- [Rezepte](https://caquelon.de/Rezepte): Moitié-Moitié, Appenzeller, Walliser Tomatenfondue.
-- [Impressum](https://caquelon.de/Impressum): Betreiberangaben nach § 5 DDG.
+- [Startseite](https://www.caquelon.de/): Kaufratgeber, Materialkunde, Rechner-Tools.
+- [Material-Vergleich](https://www.caquelon.de/Materialien): Keramik vs. Gusseisen vs. Steingut – Wärmespeicherung und Vor- & Nachteile.
+- [Mengen-Rechner](https://www.caquelon.de/Rechner): Exakte Berechnung von Käse-, Wein- und Stärkemengen nach Personenzahl.
+- [Rezepte](https://www.caquelon.de/Rezepte): Moitié-Moitié, Appenzeller, Walliser Tomatenfondue.
+- [Impressum](https://www.caquelon.de/Impressum): Betreiberangaben nach § 5 DDG.
 
 ## Technische Spezifikationen & Physik
 - **Material Gusseisen**: Hohe Wärmekapazität, geeignet für Induktion, Fleisch- und Käsefondue.

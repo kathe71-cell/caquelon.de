@@ -40,7 +40,7 @@ export default function WeisseSchokoladenFondue() {
         title="Weißes Schokoladenfondue Rezept | Elegant & Cremig"
         description="Elegantes Fondue mit weißer Schokolade, Kokos und Vanille. Perfekt mit frischen Beeren - in nur 12 Minuten fertig!"
         keywords="weißes Schokoladenfondue, weißes Schokofondue, Dessert Fondue, Schokofondue weiß, elegantes Dessert"
-        canonical="https://caquelon.de/weisseschokoladenfondue"
+        canonical="https://www.caquelon.de/weisseschokoladenfondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

@@ -24,7 +24,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Original Schweizer Käsefondue (Moitié-Moitié)",
   "image": [
-    "https://caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization", 
@@ -67,7 +67,7 @@ export default function SchweizerKaeseFondue() {
         title="Original Schweizer Käsefondue Rezept (Moitié-Moitié) | caquelon.de"
         description="Das originale Schweizer Käsefondue Rezept (Moitié-Moitié) mit Gruyère AOP & Vacherin AOP. Mit Mengenumrechner & Profi-Tipps gegen Anbrennen!"
         keywords="Schweizer Käsefondue, Moitie Moitie, Gruyère Vacherin Fondue, Käsefondue Rezept original, Caquelon Käsefondue"
-        canonical="https://caquelon.de/schweizerkaesefondue"
+        canonical="https://www.caquelon.de/schweizerkaesefondue"
         structuredData={structuredData}
       />
 

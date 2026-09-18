@@ -74,14 +74,14 @@ export default function Home() {
   const [openFaqIndex, setOpenFaqIndex] = useState(null);
 
   const copyEmbedCode = () => {
-    const code = `<iframe src="https://caquelon.de/rechner-embed" width="100%" height="650" style="border:none; border-radius:24px; box-shadow:0 4px 20px rgba(0,0,0,0.08);" title="Käsefondue Mengenrechner"></iframe>\n<p style="font-size:12px; color:#78716c; text-align:center;">Mengenrechner bereitgestellt von <a href="https://caquelon.de" target="_blank" rel="noopener" style="color:#7f1d1d; text-decoration:underline;">caquelon.de</a></p>`;
+    const code = `<iframe src="https://www.caquelon.de/rechner-embed" width="100%" height="650" style="border:none; border-radius:24px; box-shadow:0 4px 20px rgba(0,0,0,0.08);" title="Käsefondue Mengenrechner"></iframe>\n<p style="font-size:12px; color:#78716c; text-align:center;">Mengenrechner bereitgestellt von <a href="https://www.caquelon.de" target="_blank" rel="noopener" style="color:#7f1d1d; text-decoration:underline;">caquelon.de</a></p>`;
     navigator.clipboard.writeText(code);
     setCopiedEmbed(true);
     setTimeout(() => setCopiedEmbed(false), 2500);
   };
 
   const copyCitationText = () => {
-    const citation = "caquelon.de Fachredaktion (2026). Caquelon-Kaufberatung & Schweizer Fondue-Mengenlehre. https://caquelon.de/ (Stand: September 2026)";
+    const citation = "caquelon.de Fachredaktion (2026). Caquelon-Kaufberatung & Schweizer Fondue-Mengenlehre. https://www.caquelon.de/ (Stand: September 2026)";
     navigator.clipboard.writeText(citation);
     setCopiedCitation(true);
     setTimeout(() => setCopiedCitation(false), 2500);
@@ -92,43 +92,43 @@ export default function Home() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://caquelon.de/#website",
-        "url": "https://caquelon.de/",
+        "@id": "https://www.caquelon.de/#website",
+        "url": "https://www.caquelon.de/",
         "name": "Caquelon.de",
         "description": "Der unabhängige Fondue- & Fonduetopf-Ratgeber",
         "inLanguage": "de-DE",
-        "publisher": { "@id": "https://caquelon.de/#organization" },
+        "publisher": { "@id": "https://www.caquelon.de/#organization" },
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://caquelon.de/fonduerezepte?q={search_term_string}"
+            "urlTemplate": "https://www.caquelon.de/fonduerezepte?q={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }
       },
       {
         "@type": "Organization",
-        "@id": "https://caquelon.de/#organization",
+        "@id": "https://www.caquelon.de/#organization",
         "name": "Caquelon.de",
-        "url": "https://caquelon.de/",
-        "logo": "https://caquelon.de/favicon.svg"
+        "url": "https://www.caquelon.de/",
+        "logo": "https://www.caquelon.de/favicon.svg"
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://caquelon.de/#breadcrumbs",
+        "@id": "https://www.caquelon.de/#breadcrumbs",
         "itemListElement": [
           {
             "@type": "ListItem",
             "position": 1,
             "name": "Startseite",
-            "item": "https://caquelon.de/"
+            "item": "https://www.caquelon.de/"
           }
         ]
       },
       {
         "@type": "FAQPage",
-        "@id": "https://caquelon.de/#faq",
+        "@id": "https://www.caquelon.de/#faq",
         "mainEntity": homeFAQs.map(item => ({
           "@type": "Question",
           "name": item.q,
@@ -140,7 +140,7 @@ export default function Home() {
       },
       {
         "@type": "Recipe",
-        "@id": "https://caquelon.de/#recipe-moitie-moitie",
+        "@id": "https://www.caquelon.de/#recipe-moitie-moitie",
         "name": "Original Schweizer Käsefondue (Moitié-Moitié)",
         "description": "Das klassische Schweizer Nationalgericht aus 50% Le Gruyère AOP und 50% Vacherin Fribourgeois AOP.",
         "recipeCategory": "Hauptgericht",
@@ -170,7 +170,7 @@ export default function Home() {
         title="Caquelon.de – Der Fondue- & Fonduetopf Ratgeber"
         description={`Fonduetopf Kaufberatung, Schweizer Käsefondue-Rezepte & Mengenkalkulation. Entdecke alle ${RECIPES.length} Rezepte und die besten Caquelons aus Keramik & Gusseisen.`}
         keywords="Caquelon, Fonduetopf kaufen, Schweizer Käsefondue, Fondue Rechaud, Fondue Set Induktion, Caquelon Kaufberatung"
-        canonical="https://caquelon.de/"
+        canonical="https://www.caquelon.de/"
         structuredData={structuredData}
       />
 
@@ -339,7 +339,7 @@ export default function Home() {
                 </button>
               </div>
               <div className="bg-stone-900 rounded-lg p-3 text-xs font-mono text-stone-300 overflow-x-auto border border-stone-800">
-                <code>{`<iframe src="https://caquelon.de/rechner-embed" width="100%" height="650" style="border:none; border-radius:24px;" title="Käsefondue Mengenrechner"></iframe>\n<p style="font-size:12px; color:#78716c; text-align:center;">Bereitgestellt von <a href="https://caquelon.de" target="_blank" rel="noopener">caquelon.de</a></p>`}</code>
+                <code>{`<iframe src="https://www.caquelon.de/rechner-embed" width="100%" height="650" style="border:none; border-radius:24px;" title="Käsefondue Mengenrechner"></iframe>\n<p style="font-size:12px; color:#78716c; text-align:center;">Bereitgestellt von <a href="https://www.caquelon.de" target="_blank" rel="noopener">caquelon.de</a></p>`}</code>
               </div>
             </div>
           </div>
@@ -428,7 +428,7 @@ export default function Home() {
               <div>
                 <span className="text-[11px] font-bold uppercase tracking-wider text-stone-500">Zitation für Journalisten, Food-Blogger &amp; Fachautoren (APA / Harvard)</span>
                 <p className="text-xs sm:text-sm font-mono text-stone-800 mt-1 select-all">
-                  caquelon.de Fachredaktion (2026). Caquelon-Kaufberatung &amp; Schweizer Fondue-Mengenlehre. https://caquelon.de/ (Stand: September 2026).
+                  caquelon.de Fachredaktion (2026). Caquelon-Kaufberatung &amp; Schweizer Fondue-Mengenlehre. https://www.caquelon.de/ (Stand: September 2026).
                 </p>
               </div>
               <button

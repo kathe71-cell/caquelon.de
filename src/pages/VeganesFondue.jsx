@@ -20,7 +20,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Veganes Fondue mit Gemüse & Tofu",
   "image": [
-    "https://caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.svg"
   ],
   "author": {
     "@type": "Organization",
@@ -63,7 +63,7 @@ export default function VeganesFondue() {
         title="Veganes Fondue Rezept mit Gemüse & Tofu | Caquelon.de"
         description="Herzhaftes veganes Fondue mit Gemüse, Tofu und leckerer Brühe. Perfekt für pflanzliche Ernährung!"
         keywords="veganes Fondue, Tofu Fondue, pflanzliches Fondue, Gemüse Fondue"
-        canonical="https://caquelon.de/veganesfondue"
+        canonical="https://www.caquelon.de/veganesfondue"
         structuredData={structuredData}
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">

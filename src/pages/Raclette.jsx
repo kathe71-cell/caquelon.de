@@ -14,7 +14,7 @@ export default function Raclette() {
         title="Raclette 2026: Der große Raclette-Grill & Käse Kaufberater"
         description="Raclette vs. Fondue im Vergleich: Entdecke die besten Raclette-Grills mit Steinplatte, Pfännchen-Ideen und echten Raclette-Käse AOP."
         keywords="Raclette, Raclette Grill kaufen, Raclette Käse, Raclette vs Fondue, Pfännchen Ideen, Silvester Raclette"
-        canonical="https://caquelon.de/raclette"
+        canonical="https://www.caquelon.de/raclette"
       />
       
       <div className="min-h-screen bg-[#faf8f5] text-stone-900">

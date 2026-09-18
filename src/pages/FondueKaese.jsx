@@ -12,7 +12,7 @@ export default function FondueKaese() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://caquelon.de/fonduekaese",
+        "@id": "https://www.caquelon.de/fonduekaese",
         "name": "Fondue Käse kaufen: Schweizer AOP Käsesorten & Mischungen",
         "description": "Welcher Käse eignet sich für Fondue? Ratgeber für Gruyère AOP, Vacherin Fribourgeois, Appenzeller & Emmentaler.",
         "inLanguage": "de-DE"
@@ -27,7 +27,7 @@ export default function FondueKaese() {
         "publisher": {
           "@type": "Organization",
           "name": "Caquelon.de",
-          "url": "https://caquelon.de"
+          "url": "https://www.caquelon.de"
         }
       }
     ]
@@ -39,7 +39,7 @@ export default function FondueKaese() {
         title="Fondue Käse kaufen: Die besten Käsesorten & Mischungen"
         description="Welcher Käse schmilzt am besten? Ratgeber für Gruyère AOP, Vacherin Fribourgeois, Appenzeller & Emmentaler. Mit Bezugsquellen & Mischverhältnis!"
         keywords="Fondue Käse kaufen, Käse für Fondue, Fondue Käsemischung, Gruyère kaufen, Vacherin Fribourgeois, Appenzeller Fondue"
-        canonical="https://caquelon.de/fonduekaese"
+        canonical="https://www.caquelon.de/fonduekaese"
         structuredData={structuredData}
       />
 

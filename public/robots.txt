@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://caquelon.de/sitemap.xml
+Sitemap: https://www.caquelon.de/sitemap.xml

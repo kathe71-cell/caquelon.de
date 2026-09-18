@@ -9,7 +9,7 @@ export default function Datenschutz() {
         title="Datenschutzerklärung (DSGVO) | caquelon.de"
         description="Datenschutzerklärung für caquelon.de. Wir informieren über die Verarbeitung personenbezogener Daten, Cookies und Ihre Rechte nach der DSGVO."
         keywords="Datenschutz, DSGVO, Cookies, personenbezogene Daten"
-        canonical="https://caquelon.de/datenschutz"
+        canonical="https://www.caquelon.de/datenschutz"
       />
       <div className="min-h-screen bg-gradient-to-b from-stone-50 to-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16">

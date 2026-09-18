@@ -13,8 +13,8 @@ export default function CaquelonKaufen() {
     "@graph": [
       {
         "@type": "WebPage",
-        "@id": "https://caquelon.de/CaquelonKaufen",
-        "url": "https://caquelon.de/CaquelonKaufen",
+        "@id": "https://www.caquelon.de/CaquelonKaufen",
+        "url": "https://www.caquelon.de/CaquelonKaufen",
         "name": "Caquelon kaufen: Der große Fonduetopf & Fondueset Test 2026",
         "description": "Welcher Fonduetopf passt zu dir? Kaufberatung für Caquelons aus Keramik, Gusseisen & Edelstahl mit Induktions-Check.",
         "inLanguage": "de-DE"
@@ -71,7 +71,7 @@ export default function CaquelonKaufen() {
         title="Caquelon kaufen: Der große Fonduetopf & Set Kaufberater"
         description="Welches Caquelon passt zu deinen Abenden? Unabhängige Kaufberatung für Fonduetöpfe aus Keramik, Gusseisen & Edelstahl. Mit Induktions-Tipps!"
         keywords="Caquelon kaufen, Fonduetopf kaufen, Fondueset Induktion, Keramik Caquelon, Gusseisen Fonduetopf, Kuhn Rikon Zermatt, Le Creuset Fondue"
-        canonical="https://caquelon.de/caquelonkaufen"
+        canonical="https://www.caquelon.de/caquelonkaufen"
         structuredData={structuredData}
       />
 
