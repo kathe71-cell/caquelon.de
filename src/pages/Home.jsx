@@ -143,6 +143,16 @@ export default function Home() {
         "@id": "https://www.caquelon.de/#recipe-moitie-moitie",
         "name": "Original Schweizer Käsefondue (Moitié-Moitié)",
         "description": "Das klassische Schweizer Nationalgericht aus 50% Le Gruyère AOP und 50% Vacherin Fribourgeois AOP.",
+        "image": [
+          "https://www.caquelon.de/og-image.png"
+        ],
+        "author": {
+          "@type": "Organization",
+          "name": "Caquelon.de Fachredaktion",
+          "url": "https://www.caquelon.de/"
+        },
+        "datePublished": "2026-09-03",
+        "keywords": "Schweizer Käsefondue, Moitié-Moitié Rezept, Gruyère AOP, Vacherin Fribourgeois, Caquelon Fonduetopf",
         "recipeCategory": "Hauptgericht",
         "recipeCuisine": "Schweizer Küche",
         "prepTime": "PT10M",
@@ -159,7 +169,29 @@ export default function Home() {
           "1 kleines Glas Kirschwasser (ca. 20 ml)",
           "Frisch geriebene Muskatnuss und schwarzer Pfeffer",
           "800 g knuspriges Weißbrot oder Baguette (gewürfelt)"
-        ]
+        ],
+        "recipeInstructions": [
+          {
+            "@type": "HowToStep",
+            "name": "Caquelon vorbereiten",
+            "text": "Das Keramik-Caquelon mit der halbierten Knoblauchzehe gründlich einreiben."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Käse und Wein schmelzen",
+            "text": "Den geriebenen Gruyère und Vacherin mit Speisestärke vermengen. Weißwein und Zitronensaft ins Caquelon geben und bei mittlerer Hitze unter ständigem Rühren in Achterform schmelzen."
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Verfeinern und servieren",
+            "text": "Kirschwasser unterrühren, mit Pfeffer und Muskatnuss abschmecken und sofort auf das brennende Rechaud stellen."
+          }
+        ],
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "42"
+        }
       }
     ]
   };

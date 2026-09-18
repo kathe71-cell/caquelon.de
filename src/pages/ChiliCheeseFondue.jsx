@@ -22,7 +22,7 @@ const structuredData = {
   "@type": "Recipe", 
   "name": "Feuriges Chili-Käsefondue",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization",

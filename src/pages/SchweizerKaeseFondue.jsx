@@ -24,7 +24,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Original Schweizer Käsefondue (Moitié-Moitié)",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization", 

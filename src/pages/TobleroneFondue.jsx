@@ -17,6 +17,27 @@ const ingredients = [
 const structuredData = {
   "@context": "https://schema.org/",
   "@type": "Recipe",
+  "image": [
+    "https://www.caquelon.de/og-image.png"
+  ],
+  "recipeIngredient": ingredients.map(i => `${i.quantity}${i.unit} ${i.name}`),
+  "recipeInstructions": [
+      {
+          "@type": "HowToStep",
+          "name": "Sahne erhitzen",
+          "text": "Schlagsahne im Caquelon vorsichtig erwärmen."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Toblerone schmelzen",
+          "text": "Die Toblerone in Stücke brechen und in der Sahne unter Rühren schmelzen lassen."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Servieren",
+          "text": "Auf dem Rechaud platzieren und mit Früchten und Biskuit genießen."
+      }
+  ],
   "name": "Toblerone-Schokoladenfondue",
   "author": {
     "@type": "Organization",

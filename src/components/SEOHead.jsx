@@ -111,5 +111,13 @@ export default function SEOHead({
     }
   }, [title, description, keywords, canonical, ogType, ogImage, structuredData, gaMeasurementId]);
 
-  return null;
+  if (!structuredData) return null;
+
+  return (
+    <script
+      id="seo-structured-data"
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+    />
+  );
 }

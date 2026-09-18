@@ -22,7 +22,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Käsefondue ohne Alkohol - familienfreundlich",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization",

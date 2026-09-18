@@ -20,7 +20,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Veganes Fondue mit Gemüse & Tofu",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization",

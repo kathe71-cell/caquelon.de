@@ -18,6 +18,27 @@ const ingredients = [
 const structuredData = {
   "@context": "https://schema.org/",
   "@type": "Recipe",
+  "image": [
+    "https://www.caquelon.de/og-image.png"
+  ],
+  "recipeIngredient": ingredients.map(i => `${i.quantity}${i.unit} ${i.name}`),
+  "recipeInstructions": [
+      {
+          "@type": "HowToStep",
+          "name": "Kokosmilch erwärmen",
+          "text": "Kokosmilch und Sahne bei milder Hitze im Fonduetopf erhitzen."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Schokolade schmelzen",
+          "text": "Weiße Schokolade in Stücken einrühren, bis alles homogen geschmolzen ist."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Aromatisieren und dippen",
+          "text": "Mit etwas Vanille abschmecken und sofort mit frischen Beeren und Ananas servieren."
+      }
+  ],
   "name": "Weißes Schokoladenfondue mit Kokos",
   "author": {
     "@type": "Organization",

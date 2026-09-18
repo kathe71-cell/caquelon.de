@@ -19,7 +19,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Klassisches Schokoladenfondue",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization",

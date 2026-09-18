@@ -18,6 +18,27 @@ const ingredients = [
 const structuredData = {
   "@context": "https://schema.org/",
   "@type": "Recipe",
+  "image": [
+    "https://www.caquelon.de/og-image.png"
+  ],
+  "recipeIngredient": ingredients.map(i => `${i.quantity}${i.unit} ${i.name}`),
+  "recipeInstructions": [
+      {
+          "@type": "HowToStep",
+          "name": "Karamell vorbereiten",
+          "text": "Sahne und braunen Zucker im Caquelon erwärmen, Butter dazugeben und sanft köcheln lassen."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Salz zufügen",
+          "text": "Fleur de Sel unterrühren und die Karamellmasse zu einer sämigen Sauce eindicken."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Warm servieren",
+          "text": "Auf dem Rechaud warmhalten und mit Apfelschnitzen und Brezeln dippen."
+      }
+  ],
   "name": "Gesalzenes Karamell-Fondue",
   "author": {
     "@type": "Organization",

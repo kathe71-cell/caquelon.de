@@ -16,6 +16,27 @@ const ingredients = [
 const structuredData = {
   "@context": "https://schema.org/",
   "@type": "Recipe",
+  "image": [
+    "https://www.caquelon.de/og-image.png"
+  ],
+  "recipeIngredient": ingredients.map(i => `${i.quantity}${i.unit} ${i.name}`),
+  "recipeInstructions": [
+      {
+          "@type": "HowToStep",
+          "name": "Zutaten erwärmen",
+          "text": "Die Sahne in einem hitzebeständigen Fonduetopf bei schwacher Hitze sanft erwärmen."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Nutella schmelzen",
+          "text": "Die Nutella portionsweise mit dem Schneebesen einrühren, bis eine glatte, glänzende Schokoladencreme entsteht."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Warmhalten und genießen",
+          "text": "Auf das Rechaud mit kleiner Flamme stellen und sofort mit Früchten, Marshmallows und Keksen genießen."
+      }
+  ],
   "name": "Nutella-Fondue",
   "author": {
     "@type": "Organization",

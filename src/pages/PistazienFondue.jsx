@@ -19,6 +19,27 @@ const ingredients = [
 const structuredData = {
   "@context": "https://schema.org/",
   "@type": "Recipe",
+  "image": [
+    "https://www.caquelon.de/og-image.png"
+  ],
+  "recipeIngredient": ingredients.map(i => `${i.quantity}${i.unit} ${i.name}`),
+  "recipeInstructions": [
+      {
+          "@type": "HowToStep",
+          "name": "Sahne und Schokolade",
+          "text": "Sahne im Fonduetopf erwärmen und die weiße Schokolade darin unter ständigem Rühren langsam schmelzen."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Pistaziencreme einrühren",
+          "text": "Die Pistaziencreme und eine Prise Meersalz hinzufügen und cremig verrühren."
+      },
+      {
+          "@type": "HowToStep",
+          "name": "Garnieren und servieren",
+          "text": "Mit gehackten Pistazien bestreuen und warm servieren."
+      }
+  ],
   "name": "Pistazien-Schokoladenfondue",
   "author": {
     "@type": "Organization",

@@ -20,7 +20,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Fondue Chinoise (Brühe-Fondue)",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization",

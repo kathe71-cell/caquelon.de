@@ -21,7 +21,7 @@ const structuredData = {
   "@type": "Recipe",
   "name": "Bierkäse-Fondue mit Brezn",
   "image": [
-    "https://www.caquelon.de/og-image.svg"
+    "https://www.caquelon.de/og-image.png"
   ],
   "author": {
     "@type": "Organization",
