@@ -23,7 +23,29 @@ console.log(`Starting prerendering of ${routes.length} routes for caquelon.de...
 for (const url of routes) {
   try {
     const { html: appHtml } = render(url);
-    const html = template.replace(/<div id="root"[^>]*><\/div>/, `<div id="root">${appHtml}</div>`);
+    let html = template.replace(/<div id="root"[^>]*><\/div>/, `<div id="root">${appHtml}</div>`);
+
+    const titleMatch = appHtml.match(/data-ssr-title="(.*?)"/);
+    const descMatch = appHtml.match(/data-ssr-desc="(.*?)"/);
+    const canMatch = appHtml.match(/data-ssr-canonical="(.*?)"/);
+
+    if (titleMatch && titleMatch[1]) {
+      const pageTitle = titleMatch[1];
+      html = html.replace(/<title>.*?<\/title>/, `<title>${pageTitle}</title>`);
+      html = html.replace(/<meta property="og:title" content=".*?" \/>/, `<meta property="og:title" content="${pageTitle}" />`);
+      html = html.replace(/<meta name="twitter:title" content=".*?" \/>/, `<meta name="twitter:title" content="${pageTitle}" />`);
+    }
+
+    if (descMatch && descMatch[1]) {
+      const pageDesc = descMatch[1];
+      html = html.replace(/<meta name="description" content=".*?" \/>/, `<meta name="description" content="${pageDesc}" />`);
+      html = html.replace(/<meta property="og:description" content=".*?" \/>/, `<meta property="og:description" content="${pageDesc}" />`);
+      html = html.replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${pageDesc}" />`);
+    }
+
+    const canonicalUrl = (canMatch && canMatch[1]) || `https://www.caquelon.de${url === '/' ? '/' : url}`;
+    html = html.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${canonicalUrl}" />`);
+    html = html.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${canonicalUrl}" />`);
 
     const filePath = url === '/' ? 'dist/index.html' : `dist${url}/index.html`;
     const fullPath = toAbsolute(filePath);

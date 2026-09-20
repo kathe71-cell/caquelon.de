@@ -111,13 +111,22 @@ export default function SEOHead({
     }
   }, [title, description, keywords, canonical, ogType, ogImage, structuredData, gaMeasurementId]);
 
-  if (!structuredData) return null;
-
   return (
-    <script
-      id="seo-structured-data"
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-    />
+    <>
+      <div
+        className="hidden"
+        style={{ display: 'none' }}
+        data-ssr-title={title}
+        data-ssr-desc={description}
+        data-ssr-canonical={canonical}
+      />
+      {structuredData && (
+        <script
+          id="seo-structured-data"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      )}
+    </>
   );
 }
