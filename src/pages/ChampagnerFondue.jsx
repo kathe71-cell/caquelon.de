@@ -46,6 +46,9 @@ export default function ChampagnerFondue() {
                 <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>Speisestärke mit etwas kaltem Champagner anrühren und eindicken lassen.</li>
                 <li className="flex gap-4"><div className="w-8 h-8 bg-red-900 text-white rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>Trüffelöl und Pfeffer unterrühren. Mit Baguette oder Brioche servieren.</li>
               </ol>
+              <div className="mt-6 p-4 rounded-xl bg-amber-50 border border-amber-200 text-xs text-amber-950 leading-relaxed">
+                <strong>Gourmet-Tipp:</strong> Wer statt synthetischem Trüffelöl lieber echten schwarzen Sommertrüffel frisch über das fertige Käsefondue hobeln möchte, findet auf <a href="https://www.sommertrueffel.de/" target="_blank" rel="noopener" className="text-amber-900 font-bold underline hover:text-amber-700">sommertrueffel.de</a> einen praktischen Portionsrechner für die optimale Gramm-Dosierung sowie Tipps zu Frische und Hobeltechnik.
+              </div>
             </div>
           </div>
         </section>

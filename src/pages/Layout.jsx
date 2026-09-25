@@ -10,10 +10,12 @@ import {
   MessageCircle,
   ChevronDown,
   ChefHat,
-  BookOpen
+  BookOpen,
+  Search
 } from "lucide-react";
 import ScrollToTop from '../components/ScrollToTop';
 import Logo from '../components/Logo';
+import SearchModal from '../components/SearchModal';
 
 const recipeCategories = [
   {
@@ -75,6 +77,13 @@ export default function Layout({ children, currentPageName }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [mobileRecipesOpen, setMobileRecipesOpen] = useState(false);
   const [mobileRatgeberOpen, setMobileRatgeberOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
+
+  useEffect(() => {
+    const handleCustomToggle = () => setSearchOpen(prev => !prev);
+    window.addEventListener('toggle-caquelon-search', handleCustomToggle);
+    return () => window.removeEventListener('toggle-caquelon-search', handleCustomToggle);
+  }, []);
   const [showCookieBanner, setShowCookieBanner] = useState(false);
   const [showCookieDetails, setShowCookieDetails] = useState(false);
   const [cookieSettings, setCookieSettings] = useState({
@@ -258,7 +267,19 @@ export default function Layout({ children, currentPageName }) {
               >
                 FAQ
               </Link>
+              <button
+                onClick={() => setSearchOpen(true)}
+                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs font-bold transition-colors border border-stone-200"
+                title="Suche öffnen (Strg + K)"
+                aria-label="Suche öffnen"
+              >
+                <Search className="w-4 h-4 text-stone-600" />
+                <span className="hidden lg:inline">Suche</span>
+                <kbd className="hidden lg:inline-block bg-white border border-stone-300 text-[10px] font-mono px-1 rounded text-stone-500">⌘K</kbd>
+              </button>
             </nav>
+
+            <SearchModal isOpen={searchOpen} onClose={() => setSearchOpen(false)} />
 
             {/* Mobile menu button */}
             <button

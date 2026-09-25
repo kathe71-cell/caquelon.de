@@ -443,7 +443,7 @@ export default function Home() {
                     <ShieldCheck className="w-4 h-4 text-red-900" />
                     <span>Transparente Kaufberatung</span>
                   </div>
-                  <p>Unabhängiges Fachportal nach § 5 DDG ohne Verkaufsbindung an einzelne Hersteller. Fundierter Materialvergleich für Induktion &amp; Rechaud.</p>
+                  <p>Unabhängiges Informationsportal nach § 5 DDG ohne Verkaufsbindung an einzelne Hersteller. Fundierter Materialvergleich für Induktion &amp; Rechaud.</p>
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5 font-bold text-stone-900 mb-1">

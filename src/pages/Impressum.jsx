@@ -45,11 +45,6 @@ export default function Impressum() {
                     </a>
                   </div>
                   
-                  <div className="mt-4 pt-4 border-t border-stone-200">
-                    <p className="text-gray-700 font-medium">
-                      Kleinunternehmer nach §19 UStG
-                    </p>
-                  </div>
                 </div>
               </section>
 
