@@ -7,8 +7,7 @@ export default function SEOHead({
   canonical = "https://www.caquelon.de",
   ogType = "website",
   ogImage = "https://www.caquelon.de/og-image.svg",
-  structuredData = null,
-  gaMeasurementId = null
+  structuredData = null
 }) {
   useEffect(() => {
     // 1. Update Title
@@ -89,27 +88,7 @@ export default function SEOHead({
       scriptElement.remove();
     }
 
-    // 7. Optional Google Analytics (GA4) Auto-Injector
-    if (gaMeasurementId) {
-      const gaScriptId = 'ga4-script';
-      if (!document.getElementById(gaScriptId)) {
-        const gaScript = document.createElement('script');
-        gaScript.id = gaScriptId;
-        gaScript.async = true;
-        gaScript.src = `https://www.googletagmanager.com/gtag/js?id=${gaMeasurementId}`;
-        document.head.appendChild(gaScript);
-
-        const gaInitScript = document.createElement('script');
-        gaInitScript.textContent = `
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', '${gaMeasurementId}');
-        `;
-        document.head.appendChild(gaInitScript);
-      }
-    }
-  }, [title, description, keywords, canonical, ogType, ogImage, structuredData, gaMeasurementId]);
+  }, [title, description, keywords, canonical, ogType, ogImage, structuredData]);
 
   return (
     <>

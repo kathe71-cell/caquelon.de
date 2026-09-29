@@ -84,14 +84,6 @@ export default function Layout({ children, currentPageName }) {
     window.addEventListener('toggle-caquelon-search', handleCustomToggle);
     return () => window.removeEventListener('toggle-caquelon-search', handleCustomToggle);
   }, []);
-  const [showCookieBanner, setShowCookieBanner] = useState(false);
-  const [showCookieDetails, setShowCookieDetails] = useState(false);
-  const [cookieSettings, setCookieSettings] = useState({
-    necessary: true,
-    analytics: false,
-    marketing: false,
-    preferences: false
-  });
   const location = useLocation();
 
   const mainUrl = `https://www.caquelon.de`;
@@ -103,39 +95,6 @@ export default function Layout({ children, currentPageName }) {
     twitter: `https://twitter.com/intent/tweet?url=${encodeURIComponent(mainUrl)}&text=${encodeURIComponent(shareTitle)}`,
     whatsapp: `https://wa.me/?text=${encodeURIComponent(shareTitle + ' ' + mainUrl)}`,
     email: `mailto:?subject=${encodeURIComponent("Toller Fondue-Guide: Caquelon.de")}&body=${encodeURIComponent(shareDescription + '\n\nSchau mal hier: ' + mainUrl)}`
-  };
-
-  useEffect(() => {
-    const consent = localStorage.getItem('cookie_consent');
-    const settings = localStorage.getItem('cookie_settings');
-    if (!consent) {
-      setShowCookieBanner(true);
-    } else if (settings) {
-      setCookieSettings(JSON.parse(settings));
-    }
-
-    const handleOpenSettings = () => setShowCookieBanner(true);
-    window.addEventListener('open-cookie-settings', handleOpenSettings);
-    return () => window.removeEventListener('open-cookie-settings', handleOpenSettings);
-  }, []);
-
-  const handleCookieConsent = (type) => {
-    if (type === 'all') {
-      const allSettings = { necessary: true, analytics: true, marketing: true, preferences: true };
-      setCookieSettings(allSettings);
-      localStorage.setItem('cookie_consent', 'all');
-      localStorage.setItem('cookie_settings', JSON.stringify(allSettings));
-    } else if (type === 'necessary') {
-      const necessarySettings = { necessary: true, analytics: false, marketing: false, preferences: false };
-      setCookieSettings(necessarySettings);
-      localStorage.setItem('cookie_consent', 'necessary');
-      localStorage.setItem('cookie_settings', JSON.stringify(necessarySettings));
-    } else if (type === 'custom') {
-      localStorage.setItem('cookie_consent', 'custom');
-      localStorage.setItem('cookie_settings', JSON.stringify(cookieSettings));
-    }
-    setShowCookieBanner(false);
-    setShowCookieDetails(false);
   };
 
   const scrollToTop = () => {
@@ -423,7 +382,6 @@ export default function Layout({ children, currentPageName }) {
               <ul className="space-y-2 text-xs text-stone-300 mb-4">
                 <li><Link to={createPageUrl("Impressum")} onClick={scrollToTop} className="hover:text-white">Impressum</Link></li>
                 <li><Link to={createPageUrl("Datenschutz")} onClick={scrollToTop} className="hover:text-white">Datenschutz</Link></li>
-                <li><button type="button" onClick={() => setShowCookieBanner(true)} className="hover:text-white text-left cursor-pointer transition-colors">Datenschutzeinstellungen</button></li>
                 <li><Link to={createPageUrl("FAQ")} onClick={scrollToTop} className="hover:text-white">FAQ</Link></li>
               </ul>
               <div className="flex items-center space-x-3 text-stone-400">
@@ -445,21 +403,6 @@ export default function Layout({ children, currentPageName }) {
       {/* Scroll to Top */}
       <ScrollToTop />
 
-      {/* Cookie Banner */}
-      {showCookieBanner && (
-        <div className="fixed bottom-0 left-0 right-0 bg-stone-900 text-white border-t border-stone-800 p-4 z-[100] shadow-2xl">
-          <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
-            <div className="text-xs text-stone-300">
-              <p className="font-bold text-white mb-1">🍪 Datenschutzeinstellungen</p>
-              Wir nutzen Cookies, um dir ein optimales Website-Erlebnis zu bieten.
-            </div>
-            <div className="flex flex-wrap gap-2 text-xs font-bold">
-              <button onClick={() => handleCookieConsent('necessary')} className="px-4 py-2 rounded-xl bg-stone-800 hover:bg-stone-700 text-stone-200">Nur Notwendige</button>
-              <button onClick={() => handleCookieConsent('all')} className="px-4 py-2 rounded-xl bg-red-900 hover:bg-red-800 text-white">Alle Akzeptieren</button>
-            </div>
-          </div>
-        </div>
-      )}
     </div>
   );
 }
