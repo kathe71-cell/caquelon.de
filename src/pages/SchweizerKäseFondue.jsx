@@ -1,6 +1,8 @@
 import React from 'react';
 import { Clock, Users, ChefHat, CheckCircle } from 'lucide-react';
 import CTAButton from '../components/CTAButton';
+import FloatingCTABar from '../components/FloatingCTABar';
+import { createPageUrl } from '@/utils';
 
 export default function SchweizerKäseFondue() {
   return (
@@ -239,7 +241,7 @@ export default function SchweizerKäseFondue() {
             Hole dir jetzt das perfekte Caquelon und alle Zutaten für dein unvergessliches Fondue-Erlebnis.
           </p>
           
-          <CTAButton href="https://amzn.to/4mthKBR" variant="secondary" size="large">
+          <CTAButton href="https://amzn.to/4oVKIMA" variant="secondary" size="large">
             👉 Passendes Caquelon bei Amazon ansehen
           </CTAButton>
         </div>

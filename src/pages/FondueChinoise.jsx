@@ -1,6 +1,8 @@
 import React from 'react';
 import { Clock, Users, ChefHat, ShieldAlert, Info } from 'lucide-react';
 import CTAButton from '../components/CTAButton';
+import FloatingCTABar from '../components/FloatingCTABar';
+import { createPageUrl } from '@/utils';
 import IngredientCalculator from '../components/IngredientCalculator';
 import SEOHead from '../components/SEOHead';
 import SocialShare from '../components/SocialShare';
@@ -159,6 +161,8 @@ export default function FondueChinoise() {
           </div>
         </section>
       </div>
+    
+      <FloatingCTABar title="Fonduetopf kaufen" subtitle="Keramik, Gusseisen & Edelstahl" link={createPageUrl('CaquelonKaufen')} />
     </>
   );
 }

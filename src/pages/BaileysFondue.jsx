@@ -1,5 +1,7 @@
 import React from 'react';
 import CTAButton from '../components/CTAButton';
+import FloatingCTABar from '../components/FloatingCTABar';
+import { createPageUrl } from '@/utils';
 import SEOHead from '../components/SEOHead';
 import IngredientCalculator from '../components/IngredientCalculator';
 import { Clock, Users } from 'lucide-react';
@@ -47,14 +49,34 @@ export default function BaileysFondue() {
           </div>
         </section>
 
+        {/* Produktempfehlung */}
+        <section className="py-12 bg-amber-50 border-t border-amber-100">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-white rounded-2xl border border-amber-200 shadow-lg p-6 flex flex-col sm:flex-row items-start gap-6">
+              <div className="text-4xl">🍫</div>
+              <div className="flex-1">
+                <div className="text-xs font-bold text-amber-700 uppercase tracking-wider mb-1">Empfohlenes Set für dieses Rezept</div>
+                <h3 className="text-xl font-extrabold text-stone-900 mb-2">Schokofondue-Set mit Keramiktopf</h3>
+                <p className="text-stone-600 text-sm mb-3">Spezielles Schoko-Fondue-Set mit kleinerer Flamme für cremige Schokolade ohne Anbrennen. Perfekt für Dessert-Fondues.</p>
+                <div className="flex items-center gap-3 flex-wrap">
+                  <span className="text-2xl font-extrabold text-stone-900">ab ~35 €</span>
+                  <CTAButton href="https://amzn.to/4c4GZLx" size="small">Jetzt bei Amazon ansehen *</CTAButton>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section className="py-16 bg-gradient-to-br from-red-900 to-red-800">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-3xl font-bold text-white mb-4">Für besondere Momente!</h2>
             <p className="text-xl text-red-100 mb-8">Ein Dessert-Fondue mit Charakter - perfekt für romantische Abende.</p>
-            <CTAButton href="https://amzn.to/4mthKBR" variant="secondary" size="large">Romantisches Schokofondue-Set entdecken</CTAButton>
+            <CTAButton href="https://amzn.to/4c4GZLx" variant="secondary" size="large">Romantisches Schokofondue-Set entdecken</CTAButton>
           </div>
         </section>
       </div>
+    
+      <FloatingCTABar title="Fonduetopf kaufen" subtitle="Keramik, Gusseisen & Edelstahl" link={createPageUrl('CaquelonKaufen')} />
     </>
   );
 }

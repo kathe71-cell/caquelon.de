@@ -1,5 +1,6 @@
 import React from 'react';
 import CTAButton from '../components/CTAButton';
+import FloatingCTABar from '../components/FloatingCTABar';
 import SEOHead from '../components/SEOHead';
 import IngredientCalculator from '../components/IngredientCalculator';
 import SocialShare from '../components/SocialShare';
@@ -131,6 +132,8 @@ export default function PistazienFondue() {
           </div>
         </section>
       </div>
+    
+      <FloatingCTABar title="Fonduetopf kaufen" subtitle="Keramik, Gusseisen & Edelstahl" link={createPageUrl('CaquelonKaufen')} />
     </>
   );
 }
