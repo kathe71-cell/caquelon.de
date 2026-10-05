@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail } from 'lucide-react';
 import SEOHead from '../components/SEOHead';
 import { createPageUrl } from '@/utils';
 
@@ -38,12 +38,6 @@ export default function Impressum() {
                     </a>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <Phone className="w-5 h-5 text-red-900" />
-                    <a href="tel:+491786652623" className="text-red-900 hover:text-red-700 font-medium">
-                      +49 178 6652623
-                    </a>
-                  </div>
                   
                 </div>
               </section>
