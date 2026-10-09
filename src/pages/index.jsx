@@ -1,3 +1,4 @@
+import Projektuebernahme from "./Projektuebernahme";
 import Layout from "./Layout.jsx";
 import VercelAnalytics from "@/components/VercelAnalytics.jsx";
 
@@ -45,6 +46,7 @@ import RechnerEmbed from "./RechnerEmbed";
 import { BrowserRouter as Router, Route, Routes, useLocation } from 'react-router-dom';
 
 const PAGES = {
+    Projektuebernahme: Projektuebernahme,
     Home: Home,
     AsiaFondue: AsiaFondue,
     BaileysFondue: BaileysFondue,

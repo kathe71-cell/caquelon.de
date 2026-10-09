@@ -13,6 +13,7 @@ const locMatches = [...sitemapContent.matchAll(/<loc>https:\/\/www\.caquelon\.de
 const sitemapRoutes = locMatches.map(m => m[1] || '/');
 
 const routes = Array.from(new Set([
+  '/projektuebernahme',
   '/',
   ...sitemapRoutes,
   '/rechnerembed'
@@ -43,7 +44,7 @@ for (const url of routes) {
       html = html.replace(/<meta name="twitter:description" content=".*?" \/>/, `<meta name="twitter:description" content="${pageDesc}" />`);
     }
 
-    const canonicalUrl = (canMatch && canMatch[1]) || `https://www.caquelon.de${url === '/' ? '/' : url}`;
+    const canonicalUrl = (canMatch && canMatch[1]) || `https://caquelon.de${url === '/' ? '/' : url}`;
     html = html.replace(/<link rel="canonical" href=".*?" \/>/, `<link rel="canonical" href="${canonicalUrl}" />`);
     html = html.replace(/<meta property="og:url" content=".*?" \/>/, `<meta property="og:url" content="${canonicalUrl}" />`);
 
