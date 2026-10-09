@@ -1,4 +1,4 @@
-import Projektuebernahme from "./Projektuebernahme";
+import Projektuebernahme from "./ProjektuebernahmePage";
 import Layout from "./Layout.jsx";
 import VercelAnalytics from "@/components/VercelAnalytics.jsx";
 
